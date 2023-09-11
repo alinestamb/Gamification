@@ -3,11 +3,13 @@
 import React from 'react'
 import Navbar from './components/navbar';
 function App(){
-  return <div>
-    <Navbar>
-      
-    </Navbar>
-  </div>; }
+  return (<div className='Application'>
+      <style>{'body { background-color: #fafaf0; }'}</style>
+      <Navbar>
+      </Navbar>
+  </div>
+  ); 
+}
 export default App;
 
 
