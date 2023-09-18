@@ -1,73 +1,32 @@
-// import logo from './logo.svg';
-// import './App.css';
-import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import StartLearning from '.\src\mainpages\StartLearning.js';
-import HowToPlay from '.\src\mainpages\HowToPlay.js';
-import AboutUs from '.\src\mainpages\AboutUs.js';
+import React from 'react';
+import './App.css';
+import Navbar from './components/navbar.js';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import startlearning from './mainpages/startlearning';
+import howtoplay from './mainpages/howtoplay';
+import aboutus from './mainpages/aboutus';
 
-function App(){
+
+function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/start-learning">Start Learning</Link>
-            </li>
-            <li>
-              <Link to="/how-to-play">How to Play</Link>
-            </li>
-            <li>
-              <Link to="/about-us">About Us</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <hr />
-
-        <Route exact path="/" component={HomePage} />
-        <Route path="startlearning" component={StartLearning} />
-        <Route path="/how-to-play" component={HowToPlay} />
-        <Route path="/about-us" component={AboutUs} />
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/start-learning" component={startlearning} />
+          <Route path="/how-to-play" component={howtoplay} />
+          <Route path="/about-us" component={aboutus} />
+        </Switch>
       </div>
     </Router>
   );
-};
+}
 
 const HomePage = () => {
   return <h1>Welcome to the Home Page</h1>;
 };
 
 export default App;
-
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
 
