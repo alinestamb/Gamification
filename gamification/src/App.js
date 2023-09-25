@@ -1,42 +1,27 @@
-// import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import Navbar from './components/navbar.js';
+// import Navbar from './components/navbar.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Startlearning from './mainpages/startlearning';
+import Howtoplay from './mainpages/howtoplay';
+import Aboutus from './mainpages/aboutus';
+import Profile from './mainpages/profile';
 
+ 
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-    </div>
+    <Router>
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/howtoplay" element={<Howtoplay />} />
+          <Route path="/startlearning" element={<Startlearning />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+    </Router>
   );
 }
 
 export default App;
 
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
+ 
