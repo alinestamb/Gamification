@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 // import Navbar from './components/navbar.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Startlearning from './mainpages/startlearning';
-import Howtoplay from './mainpages/howtoplay';
+import Startlearning from './mainpages/startlearning.js';
+import Howtoplay from './mainpages/howtoplay.js';
 import Aboutus from './mainpages/aboutus';
-import Profile from './mainpages/profile';
+import Profile from './mainpages/profile.js';
 
  
 function App() {
