@@ -22,7 +22,7 @@ const chapters = [
         },
       ],
       finalQuiz: "Final Quiz 1",
-      image: ch1img, // Define ch1img elsewhere
+     // image: ch1img, // Define ch1img elsewhere
     },
     {
       title: "CHAPTER 2",
@@ -41,7 +41,7 @@ const chapters = [
         },
       ],
       finalQuiz: "Final Quiz 2",
-      image: ch2Img, // Define ch2Img elsewhere
+    //  image: ch2Img, // Define ch2Img elsewhere
     },
   ];
   

@@ -5,7 +5,7 @@ import '../fonts/fonts.css';
 import img from '../assets/aboutus.jpg';
 
 
-const Aboutus = () => {
+const AboutUs = () => {
     return(
         <Box sx={{ flexGrow: 1, backgroundColor:"#ffe", minHeight: "100vh" }}>
         <Navbar/>
@@ -31,4 +31,4 @@ const Aboutus = () => {
     );
 };
 
-export default Aboutus
+export default AboutUs

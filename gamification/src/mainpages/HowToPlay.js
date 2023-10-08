@@ -5,7 +5,7 @@ import { Box, List, ListItem, ThemeProvider, Typography, Grid, Button, Stack } f
 import '../fonts/fonts.css';
 import img from '../assets/howtoplay.png';
 
-const Howtoplay = () => {
+const HowToPlay = () => {
     return (
     <Box sx={{ flexGrow: 1, backgroundColor:"#ffe", minHeight: "100vh" }}>
     <Navbar/>
@@ -112,5 +112,5 @@ const Howtoplay = () => {
     );
   };
   
-  export default Howtoplay;
+  export default HowToPlay;
 

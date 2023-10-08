@@ -9,7 +9,7 @@ import '../fonts/fonts.css';
 
 
 
-const Startlearning = () => {
+const StartLearning = () => {
     return (
       <Box sx={{ flexGrow: 1, backgroundColor:"#ffe" }}>
         <Navbar/>
@@ -71,6 +71,6 @@ const Startlearning = () => {
     );
 };
   
-export default Startlearning;
+export default StartLearning;
 
 

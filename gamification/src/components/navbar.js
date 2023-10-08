@@ -2,9 +2,9 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import { grey, blueGrey } from '@mui/material/colors';
 import { Link, Outlet } from 'react-router-dom';
-import Howtoplay from '../mainpages/howtoplay';
-import Startlearning from '../mainpages/startlearning';
-import Aboutus from '../mainpages/aboutus';
+import Howtoplay from '../mainpages/HowToPlay';
+import Startlearning from '../mainpages/StartLearning';
+import Aboutus from '../mainpages/AboutUs';
 import avatar from '../assets/avatar.png';
 // import Profile from './mainextpages/content';
 const pages = [
