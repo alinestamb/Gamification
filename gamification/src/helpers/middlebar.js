@@ -33,7 +33,7 @@ const Chapter = ({ title, sections, finalQuiz, image }) => {
               {sections.map((section, index) => (
                 <React.Fragment key={index}>
                   <ListItem sx={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontFamily:"Gamer"}}>
-                    {section} &nbsp;
+                  <a href="http://localhost:3000/chapters" style={{ color: 'black', textDecoration: 'none' }}> {section}</a> 
                     <Divider flexItem sx={{ width: '60%', textAlign: "left", borderBottom: '2px solid #4f4f4f',}} />
                   </ListItem>
                 </React.Fragment>
