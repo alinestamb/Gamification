@@ -21,6 +21,7 @@ const Howtoplay = () => {
                 transform: 'translate(-50%, -50%)',
                 textAlign:'center',
                 color: '#E7C27D',
+                fontFamily:"Gamer",
                 textShadow: '-2px -2px 0 #504922, 2px -2px 0 #504922, -2px 2px 0 #504922, 2px 2px 0 #504922'
             }}
             >
@@ -58,28 +59,28 @@ const Howtoplay = () => {
                 <Grid item xs={5} md={5}> 
                     <Box bgcolor="#E5E0E0" flex={1} p={2} sx={{ marginBottom: '20px', border: '2px solid #c1c1c1', width:"500px" }}>
                     <Grid xs={12}>
-                    <Typography variant='h6' gutterBottom>Rules</Typography>
-                    <Typography gutterBottom sx={{fontSize:"12px"}}>
+                    <Typography variant='h6' fontFamily="Gamer" gutterBottom>Rules</Typography>
+                    <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
                         There are three levels of difficulty assigned to each course material and question in the quiz and they each give a different number of points (XP).  
                     </Typography>
                     <List>
                         <ListItem>
                             <Typography>•</Typography>
-                            <Button style={{backgroundColor:"#68CD31", borderRadius:"40px", color:"white", width:"40px", height:"25px", fontFamily:"Gamer", fontSize:"9px"}}>
-                                Easy</Button> &nbsp;
-                            <Typography sx={{fontSize:"12px"}}>5PX</Typography>
+                            <Button fontFamily="Gamer" style={{backgroundColor:"#68CD31", borderRadius:"40px", color:"white", width:"40px", height:"25px", fontFamily:"Gamer", fontSize:"9px"}}>
+                                Easy </Button> &nbsp;
+                            <Typography fontFamily="Gamer" sx={{fontSize:"12px"}}>5PX</Typography>
                         </ListItem>
                         <ListItem>
                             <Typography>• </Typography>
                             <Button style={{backgroundColor:"#FFCC00", borderRadius:"40px", color:"white", width:"40px", height:"25px", fontFamily:"Gamer", fontSize:"9px"}}>
                                 Medium</Button> &nbsp;
-                            <Typography sx={{fontSize:"12px"}}>10PX</Typography>
+                            <Typography fontFamily="Gamer" sx={{fontSize:"12px"}}>10PX</Typography>
                         </ListItem>
                         <ListItem>
                             <Typography>• </Typography>
                             <Button style={{backgroundColor:"#CF571A", borderRadius:"40px", color:"white", width:"40px", height:"25px", fontFamily:"Gamer", fontSize:"9px"}}>
                                 Hard</Button> &nbsp;
-                            <Typography sx={{fontSize:"12px"}}>15PX</Typography>
+                            <Typography fontFamily="Gamer" sx={{fontSize:"12px"}}>15PX</Typography>
                         </ListItem>
                     </List>
                     
@@ -93,16 +94,16 @@ const Howtoplay = () => {
                 <Grid item xs={7} md={7}> 
                 <Box bgcolor="#e3e9df" flex={1} p={2} sx={{ marginBottom: '20px', border: '2px solid #c5d1be'}}>
                     <Grid xs={12}>
-                    <Typography variant="h6" sx={{textDecoration:"underline"}}>Frequently Asked Questions</Typography>
-                    <Typography sx={{fontSize:"12px", color:"Green"}}>1. How can I contribute to the discussion?</Typography>
-                    <Typography sx={{fontSize:"10px"}}> Just click on "Type a response" and then click submit to contribute to the discussion.</Typography>
-                    <Typography sx={{fontSize:"12px", color:"Green"}}>2. How many times can I attemot the quiz.</Typography>
-                    <Typography sx={{fontSize:"10px"}}> You can attempt the quiz as many times as you like. We suggest understanding the content 
+                    <Typography fontFamily="Gamer" variant="h6" sx={{textDecoration:"underline"}}>Frequently Asked Questions</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>1. How can I contribute to the discussion?</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> Just click on "Type a response" and then click submit to contribute to the discussion.</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>2. How many times can I attempt the quiz.</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> You can attempt the quiz as many times as you like. We suggest understanding the content 
                     and revising any areas that you may be having trouble with before re-doing the quiz.</Typography>
-                    <Typography sx={{fontSize:"12px", color:"Green"}}>3. Why can't I access chapter 2?</Typography>
-                    <Typography sx={{fontSize:"10px"}}> To access the next chapters, you need to first pass the final quiz of the previous chapter.</Typography>
-                    <Typography sx={{fontSize:"12px", color:"Green"}}>4. How can I contribute to the discussion?</Typography>
-                    <Typography sx={{fontSize:"10px"}}> Just click on "Type a response" and then click submit to contribute to the discussion.</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>3. Why can't I access chapter 2?</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> To access the next chapters, you need to first pass the final quiz of the previous chapter.</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>4. How can I contribute to the discussion?</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> Just click on "Type a response" and then click submit to contribute to the discussion.</Typography>
                     </Grid>
                     </Box>
                 </Grid> 

@@ -21,6 +21,7 @@ const Aboutus = () => {
                     transform: 'translate(-50%, -50%)',
                     textAlign:'center',
                     color: '#E7C27D',
+                    fontFamily:'Gamer',
                     textShadow: '-2px -2px 0 #504922, 2px -2px 0 #504922, -2px 2px 0 #504922, 2px 2px 0 #504922'
                 }}
                 >

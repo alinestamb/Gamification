@@ -52,6 +52,7 @@ const Navbar = () => {
                   height: 40,
                   fontSize: '1em',
                   fontWeight: 700,
+                  fontFamily:"Gamer",
                   backgroundColor: '#C1C1C1',
                   padding: 1,
                   borderRadius: 0,

@@ -55,7 +55,7 @@ const Chapter = ({ title, sections, finalQuiz, image }) => {
     return(
     <Box sx={{ flexGrow: 1, margin:"30px" }}>
         <Grid sx={{border:'2px solid #4f4f4f', padding:'15px'}}>
-            <Typography>PROGRESS BAR: </Typography>
+            <Typography sx={{fontFamily:"Gamer"}}>PROGRESS BAR: </Typography>
                 <BorderLinearProgress variant="determinate" value={50}/>
         </Grid>        
         <Grid>
