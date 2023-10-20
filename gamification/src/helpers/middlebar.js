@@ -62,14 +62,22 @@ const Chapter = ({ title, sections, finalQuiz, image }) => {
         <Grid>
             <Chapter
                 title="CHAPTER 1"
-                sections={["01. Introduction", "02. Background","03. Literature"]}
-                finalQuiz="Final Quiz 1"
+                sections={[
+                  <a href="aboutus" style={{ textDecoration: 'none', color: 'black'}}>   01. Introduction</a>, 
+                  <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  02. Background</a>,
+                  <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  03. Literature</a>
+                ]}
+                finalQuiz={<a href="howtoplay" style={{ textDecoration: 'none', color: 'black'}}>Final Quiz 1</a>}
                 image={ch1img}
                 />
             <Chapter
                 title="CHAPTER 2"
-                sections={["01. Brainstorming", "02. How might we", "03. Decision-making"]}
-                finalQuiz="Final Quiz 2"
+                sections={[
+                  <a href="aboutus" style={{ textDecoration: 'none', color: 'black'}}>   01. Brainstorming</a>, 
+                  <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  02. How Might We</a>,
+                  <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  03. Decision-Making</a>
+                ]}
+                finalQuiz={<a href="howtoplay" style={{ textDecoration: 'none', color: 'black'}}>Final Quiz 2</a>}
                 image={ch2Img}
                 />
             </Grid> 
