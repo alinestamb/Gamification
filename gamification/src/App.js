@@ -6,7 +6,7 @@ import Startlearning from './mainpages/startlearning.js';
 import Howtoplay from './mainpages/howtoplay.js';
 import Aboutus from './mainpages/aboutus';
 import Profile from './mainpages/profile.js';
-
+import Chapters from "./mainextpages/chapters";
  
 function App() {
   return (
@@ -16,7 +16,9 @@ function App() {
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/howtoplay" element={<Howtoplay />} />
           <Route path="/" element={<Startlearning />} />
+          <Route path="/startlearning" element={<Startlearning />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path = "/chapters" element={<Chapters/>}/>
         </Routes>
     </Router>
   );

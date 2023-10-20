@@ -5,6 +5,7 @@ import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgr
 import { styled } from '@mui/material/styles';
 import ch1img from '../assets/earth.jpg';
 import ch2Img from '../assets/Paper.jpg';
+import '../helpers/middlebar_chapters.css'
 // import Introduction from '../mainextpages/content';
 
 // For the progress Bar 
@@ -33,7 +34,7 @@ const Chapter = ({ title, sections, finalQuiz, image }) => {
               {sections.map((section, index) => (
                 <React.Fragment key={index}>
                   <ListItem sx={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontFamily:"Gamer"}}>
-                  <a href="http://localhost:3000/chapters" style={{ color: 'black', textDecoration: 'none' }}> {section}</a> 
+                  <a href="chapters" style={{ color: 'black', textDecoration: 'none' }}> {section}</a> 
                     <Divider flexItem sx={{ width: '60%', textAlign: "left", borderBottom: '2px solid #4f4f4f',}} />
                   </ListItem>
                 </React.Fragment>
