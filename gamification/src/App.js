@@ -7,6 +7,7 @@ import Howtoplay from './mainpages/howtoplay.js';
 import Aboutus from './mainpages/aboutus';
 import Profile from './mainpages/profile.js';
 import Chapters from "./mainextpages/chapters";
+import QuizHome from "./mainextpages/quiz_home";
  
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/startlearning" element={<Startlearning />} />
           <Route path="/profile" element={<Profile />} />
           <Route path = "/chapters" element={<Chapters/>}/>
+          <Route path="/quizhome" element={<QuizHome/>}/>
         </Routes>
     </Router>
   );
