@@ -1,13 +1,14 @@
 .container-quiz {
-  padding: 100px 30px;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 900px;
-  display: block;
+ padding-top:13px;
+ width: 100%;
+ margin: 0 auto;
+ max-width: 900px;
+ display: block;
+ font-family: 'Gamer';
 }
 
 
-.quiz-image-stack {
+.quiz-image-stack { 
   display: grid;
   position: relative;
   grid-template-columns: repeat(12, 1fr);

@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from '../components/navbar'
 import { Box, List, ListItem, ThemeProvider, Typography, Grid, Button, Stack } from '@mui/material';
 import '../fonts/fonts.css';
-import img from '../assets/aboutus.jpg';
+//import img from '../assets/aboutus.jpg';
+import img from '../assets/aboutus_2.gif';
 
 
 const Aboutus = () => {
@@ -16,8 +17,8 @@ const Aboutus = () => {
                 <Typography variant='h2'
                 style = {{
                     position: 'absolute',
-                    top:'40%',
-                    left:'50%',
+                    top:'49%',
+                    left:'48%',
                     transform: 'translate(-50%, -50%)',
                     textAlign:'center',
                     color: '#E7C27D',
