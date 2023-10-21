@@ -67,7 +67,7 @@ const Chapter = ({ title, sections, finalQuiz, image }) => {
                   <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  02. Background</a>,
                   <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  03. Literature</a>
                 ]}
-                finalQuiz={<a href="howtoplay" style={{ textDecoration: 'none', color: 'black'}}>Final Quiz 1</a>}
+                finalQuiz={<a href="quizhome" style={{ textDecoration: 'none', color: 'black'}}>Final Quiz 1</a>}
                 image={ch1img}
                 />
             <Chapter
@@ -77,7 +77,7 @@ const Chapter = ({ title, sections, finalQuiz, image }) => {
                   <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  02. How Might We</a>,
                   <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  03. Decision-Making</a>
                 ]}
-                finalQuiz={<a href="howtoplay" style={{ textDecoration: 'none', color: 'black'}}>Final Quiz 2</a>}
+                finalQuiz={<a href="quizhome" style={{ textDecoration: 'none', color: 'black'}}>Final Quiz 2</a>}
                 image={ch2Img}
                 />
             </Grid> 
