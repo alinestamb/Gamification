@@ -1,5 +1,5 @@
 import { Grid, Typography, Box, ListItem, List, Divider, Link, Button} from '@mui/material'; 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 // import Robotomono from '../fonts/robotomono.js';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress'; //This line is the progress bar 
 import { styled } from '@mui/material/styles';
@@ -34,7 +34,7 @@ const Chapter = ({ title, sections, finalQuiz, image }) => {
               {sections.map((section, index) => (
                 <React.Fragment key={index}>
                   <ListItem sx={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontFamily:"Gamer"}}>
-                  <a href="chapters" style={{ color: 'black', textDecoration: 'none' }}> {section}</a> 
+                  <a href="http://localhost:3000/chapters" style={{ color: 'black', textDecoration: 'none' }}> {section}</a>
                     <Divider flexItem sx={{ width: '60%', textAlign: "left", borderBottom: '2px solid #4f4f4f',}} />
                   </ListItem>
                 </React.Fragment>
@@ -53,11 +53,45 @@ const Chapter = ({ title, sections, finalQuiz, image }) => {
   };
 
   const Middlebar = () => {
+    const [completed, setCompleted] = useState(null);
+  
+
+  useEffect(() => {
+    fetch("http://localhost:3002/1", {
+      method: "GET",
+      
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setCompleted(data.completed);
+      //  console.log(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+    var progressValue = completed/8 *100;
+
+    const courseId = "course1";
+
+    useEffect(() => {
+      fetch("http://localhost:3001/"+courseId, {
+        method: "GET",
+        
+      })
+        .then((response) => response.json())
+        .then((data) => {
+       
+          console.log(data);
+        })
+        .catch((error) => console.log(error));
+    }, []);
+
+
+
     return(
     <Box sx={{ flexGrow: 1, margin:"30px" }}>
         <Grid sx={{border:'2px solid #4f4f4f', padding:'15px'}}>
             <Typography>PROGRESS BAR: </Typography>
-                <BorderLinearProgress variant="determinate" value={50}/>
+                <BorderLinearProgress variant="determinate" value={progressValue}/>
         </Grid>        
         <Grid>
             <Chapter
