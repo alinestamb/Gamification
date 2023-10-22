@@ -31,6 +31,7 @@ const Startlearning = () => {
             >
                 Introduction to Artificial Intelligence
             </Typography>
+            <a href="chapters">
             <Button style = {{
                 position: 'absolute',
                 top:'70%',
@@ -45,7 +46,7 @@ const Startlearning = () => {
                 // textShadow: '-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000'
             }}>
                 Start Now!
-            </Button>
+            </Button></a>
         </Box>
 {/* ACTUAL PAGE CONTENT */}
 

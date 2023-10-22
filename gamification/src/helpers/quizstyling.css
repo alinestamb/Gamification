@@ -1,0 +1,38 @@
+.container-quiz {
+ padding-top:13px;
+ width: 100%;
+ margin: 0 auto;
+ max-width: 900px;
+ display: block;
+ font-family: 'Gamer';
+}
+
+
+.quiz-image-stack { 
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.quiz-image-stack__item--bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+}
+
+.quiz-image-stack__item--top {
+  grid-row: 1;
+  grid-column: 1 / span 8;
+  padding-top: 20%; 
+  z-index: 1; 
+}
+
+.quiz-img {
+  width: 100%;
+  display: block;
+}
+
+
+
+
+
+

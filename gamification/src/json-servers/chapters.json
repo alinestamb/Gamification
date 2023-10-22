@@ -1,0 +1,65 @@
+{
+  "courses": [{"id":"1", "name": "Introduction to AI","quizes":1, "estimateTime": "70min"}, {"id":"2","name": "Introduction to Cloud Computing", "quizes":1,  "estimateTime": "10min"}],
+  "course1": {
+    "name": "Introduction to AI",
+  "chapter1": {
+    "name":"Definitions",
+    "section1": {
+      "title": "0.1 Introduction",
+      "link": "/helpers/leftsidebar.js",
+      "points": 10,
+      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+    },
+    "section2": {
+      "title": "02. Background",
+      "link": "/chapter1/background",
+      "points": 10,
+      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+    },
+    "section3": {
+      "title": "03. Literature",
+      "link": "/chapter1/literature",
+      "points": 10,
+      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+    },
+    "finalQuiz":"Final Quiz 1"
+  },
+  "chapter2": {
+    "name":"Processes",
+    "section1": {
+      "title": "01. Brainstorming",
+      "link": "/chapter2/brainstorming",
+      "points": 10,
+      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+    },
+    "section2": {
+      "title": "02. How might we",
+      "link": "/chapter2/how-might-we",
+      "points": 10,
+      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+    },
+    "section3": {
+      "title": "03. Decision-making",
+      "link": "/chapter2/decision-making",
+      "points": 10,
+      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+    },
+    "finalQuiz":"Final Quiz 2"
+  }
+  },
+  
+  "course2": {
+    "name": "Introduction to Cloud Computing",
+  "chapter1": {
+    "section1": {
+      "title": "0.1 Introduction",
+      "link": "/helpers/leftsidebar.js",
+      "points": 10,
+      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+    },
+    "finalQuiz":"Final Quiz 2"
+  }
+  }
+}
+   
+  

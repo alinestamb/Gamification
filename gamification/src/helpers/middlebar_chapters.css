@@ -1,0 +1,85 @@
+    .book-container {
+      position: relative;
+    }
+
+    .left-book{
+      position: absolute;
+      top: 79px;
+      left: 82px;
+      font-size: 18px;
+      max-width: 330px;
+      max-height: 65%;
+      height: 90%; /* Set the height to 100% */
+      overflow: auto; /* Enable scrollability */
+      scrollbar-width: none;
+    }
+
+    
+    .right-book{
+        position: absolute;
+        top: 79px;
+        left: 488px;
+        font-size: 18px;
+        max-width: 330px;
+        max-height: 65%;
+        height: 90%; /* Set the height to 100% */
+        overflow: auto; /* Enable scrollability */
+      }
+
+
+.scrollbar::-webkit-scrollbar {
+    background-color:#ffffff00;
+    border: 1px solid #522A29;
+    border-radius: 16px;
+    width:10px
+}
+
+/* background of the scrollbar except button or resizer */
+.scrollbar::-webkit-scrollbar-track {
+    background-color:#ffffff00;      
+}
+.scrollbar::-webkit-scrollbar-track:hover {
+    background-color:#ffffff00;
+
+}
+
+/* scrollbar itself */
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color:grey;
+    border: 1px solid #522A29;
+    border-radius:80px;
+    /* border-color:#FAEFD2; */
+    background-clip: padding-box;
+
+}
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: black; 
+}
+
+/* set button(top and bottom of the scrollbar) */
+.scrollbar::-webkit-scrollbar-button {display:10px}
+
+
+
+      .right-image{
+        position: absolute;
+        top: 79px;
+        left: 488px;
+      }
+
+
+      .nxtpagebutton
+      {
+        position: absolute;
+        max-width: 100%;
+        top:80%;
+        left:75%;
+        text-align: center;
+        background-color: grey;
+        font-size: 24px;
+
+      }
+
+      .nxtpagebutton-text{
+        color:white;
+      }

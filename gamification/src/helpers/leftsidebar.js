@@ -1,12 +1,46 @@
 import {Box, Typography,Grid, List, ListItem, Button, ListItemText} from "@mui/material";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Robotomono from '../fonts/robotomono.js';
 import {ThemeProvider} from '@mui/material'; //themeprovider is used for custom fonts and themes
 import Img1 from '../assets/dailyStreak.png';
 import Img2 from '../assets/points.png';
+import badge1 from "../assets/badges/badge1.png" ;
+import badge2 from "../assets/badges/badge2.png" ;
+import badge3 from "../assets/badges/badge3.png" ;
+import badge4 from "../assets/badges/badge4.png" ;
+import badge5 from "../assets/badges/badge5.png" ;
 import Img3 from '../assets/completed.png';
+
+
+import Leaderboard from "../components/leaderboard.js";
 // &nbsp; - space 
 const Sidebar = ({}) => {
+  const [completed, setCompleted] = useState(null);
+  const [dailyStreak, setDailyStreak] = useState(null);
+  const [points, setPoints] = useState(null);
+  const [name, setName] = useState(null);
+  const [badges, setBadges] = useState([]);
+  let BadgeName = "";
+
+  const userId = "1";
+  useEffect(() => {
+    fetch("http://localhost:3002/" +userId, {
+      method: "GET",
+      
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setCompleted(data.completed);
+        setDailyStreak(data.dailyStreak);
+        setPoints(data.points);
+        setName(data.name);
+        setBadges(data.badges);
+        
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <ThemeProvider theme={Robotomono}>
     <Box bgcolor="#e5e0e0" flex={1} p={2} sx={{ marginBottom: '20px', border: '2px solid #c1c1c1' }}>
@@ -17,24 +51,31 @@ const Sidebar = ({}) => {
           <Grid item xs={12}>
           <List>
             <ListItem>
-          <Typography sx={{textAlign: 'center', fontFamily:"Gamer"}}>Student</Typography>
+          <Typography sx={{textAlign: 'center', fontFamily:"Gamer"}}>{name}</Typography>
           </ListItem>
           </List>
             <List>
               <ListItem>
                 <img src={Img1} alt="DailyStreak" style={{ width: '20px', height: '20px' }} />
-                <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}> &nbsp;Daily Streak</Typography>
+                <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}> &nbsp;Daily Streak: {dailyStreak}</Typography>
               </ListItem>
               <ListItem>
                 <img src={Img2} alt="Points" style={{ width: '20px', height: '20px' }} />
-                <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}>&nbsp;Points</Typography>
+                <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}>&nbsp;Points: {points}</Typography>
               </ListItem>
               <ListItem>
                 <img src={Img3} alt="Completed" style={{ width: '20px', height: '20px' }} />
-                <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}>&nbsp;Completed</Typography>
+                <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}>&nbsp;Completed: {completed}</Typography>
               </ListItem>
               <ListItem>
-                <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}>Badges</Typography>
+                <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}>Badges</Typography>&nbsp;
+                <br />&nbsp;
+                {
+                  
+                badges.map((badges) => <img src={badges} alt={"Badge "+badges} style={{ width: '30px', height: '30px' }} />)
+                }
+                
+                
               </ListItem>
             </List>
           </Grid>
@@ -50,7 +91,8 @@ const Sidebar = ({}) => {
           </Typography>
           {/* The below are the designs for the leaderboard */}
           <ThemeProvider theme={Robotomono}>
-            <Button variant = "contained" sx={{
+          <Leaderboard></Leaderboard>
+            {/*<Button variant = "contained" sx={{
                   width:'200px', 
                   background:'#5a8da1', 
                   marginBottom:'10px',
@@ -135,6 +177,7 @@ const Sidebar = ({}) => {
                   <span style={{ color: 'white' }}> student </span>&nbsp;
                   <span style={{ color: '#f5b92c' }}>1050 </span>
               </Button>
+                  */}
             </ThemeProvider>
         </Grid>
       </Box>
