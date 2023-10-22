@@ -1,0 +1,20 @@
+{
+   "userIds": [{"id":"1", "name": "guest","points":1}, {"id":"2","name": "user", "points":0}],
+   "1":{
+        "dailyStreak":1,
+        "points":1,
+        "completed": 1,
+        "isDone":["chapter1.section1"],
+        "name":"guest",
+        "badges":["badge1", "badge3"]
+    },
+    "2":{
+            "dailyStreak":0,
+            "points":0,
+            "completed": 0,
+            "isDone":[""],
+            "name" :"user",
+            "badges":["badge2","badge5"]
+        }
+    
+}

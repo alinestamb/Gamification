@@ -4,7 +4,13 @@ import Robotomono from '../fonts/robotomono.js';
 import {ThemeProvider} from '@mui/material'; //themeprovider is used for custom fonts and themes
 import Img1 from '../assets/dailyStreak.png';
 import Img2 from '../assets/points.png';
+import badge1 from "../assets/badges/badge1.png" ;
+import badge2 from "../assets/badges/badge2.png" ;
+import badge3 from "../assets/badges/badge3.png" ;
+import badge4 from "../assets/badges/badge4.png" ;
+import badge5 from "../assets/badges/badge5.png" ;
 import Img3 from '../assets/completed.png';
+
 
 import Leaderboard from "../components/leaderboard.js";
 // &nbsp; - space 
@@ -66,7 +72,7 @@ const Sidebar = ({}) => {
                 <br />&nbsp;
                 {
                   
-                badges.map((badges) => <img src={"https://github.com/alinestamb/Gamification/blob/Feature/gamification/src/assets/badges/badge"+badges+".png"} alt={"Badge "+badges} style={{ width: '30px', height: '30px' }} />)
+                badges.map((badges) => <img src={badges} alt={"Badge "+badges} style={{ width: '30px', height: '30px' }} />)
                 }
                 
                 
