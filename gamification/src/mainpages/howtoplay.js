@@ -3,7 +3,7 @@ import Navbar from '../components/navbar'
 import { Box, List, ListItem, ThemeProvider, Typography, Grid, Button, Stack } from '@mui/material';
 // import Robotomono from '../fonts/robotomono';
 import '../fonts/fonts.css';
-import img from '../assets/howtoplay.png';
+import img from '../assets/howtoplay.gif';
 
 const Howtoplay = () => {
     return (
@@ -34,19 +34,19 @@ const Howtoplay = () => {
                 <Stack direction="row" spacing={2}>
                 <ListItem>
                   <Button variant="outlined" disabled style={{borderRadius:"40px", backgroundColor:"#F5B92C", color:"black", height:"90px"}} >
-                    <Typography variant='h6' fontFamily="Gamer">01.</Typography> <Typography fontFamily="Gamer">
+                    <Typography variant='h6' fontFamily="Gamer" color="#b30000">01.</Typography> <Typography fontFamily="Gamer">
                         Read through the course content</Typography>
                     </Button>
                 </ListItem>
                 <ListItem>
                     <Button variant="outlined" disabled style={{borderRadius:"40px", backgroundColor:"#F5B92C", color:"black", height:"90px"}}>
-                        <Typography variant='h6' fontFamily="Gamer">02.</Typography> <Typography fontFamily="Gamer">
+                        <Typography variant='h6' fontFamily="Gamer" color="#b30000">02.</Typography> <Typography fontFamily="Gamer">
                             Collect points and ask questions in Q&A to deepen understanding</Typography>
                     </Button>
                 </ListItem>
                 <ListItem>
                     <Button variant="outlined" disabled style={{borderRadius:"40px", backgroundColor:"#F5B92C", color:"black", height:"90px"}}>
-                        <Typography variant='body1' fontFamily="Gamer">03.</Typography> <br/> <Typography variant="body1" fontFamily="Gamer">
+                        <Typography variant='body1' fontFamily="Gamer" color="#b30000">03.</Typography> <br/> <Typography variant="body1" fontFamily="Gamer">
                             Attempt the final Quiz and get badges!</Typography>
                     </Button>
                 </ListItem>
@@ -57,11 +57,12 @@ const Howtoplay = () => {
             <Box sx={{ flexGrow: 1 }} >
             <Grid container spacing={2} p ={5}>
                 <Grid item xs={5} md={5}> 
-                    <Box bgcolor="#E5E0E0" flex={1} p={2} sx={{ margin: '20px', border: '2px solid #c1c1c1', width:"560px" }}>
+                    <Box bgcolor="#E5E0E0" flex={1} p={2} sx={{ margin: '20px', border: '2px solid #c1c1c1', width:"560px", height:"432px" }}>
                     <Grid xs={12}>
-                    <Typography variant='h6' fontFamily="Gamer" gutterBottom>Rules</Typography>
+                    <Typography variant='h6' fontFamily="Gamer" gutterBottom>Rules</Typography> <hr />
                     <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
-                        There are three levels of difficulty assigned to each course material and question in the quiz and they each give a different number of points (XP).  
+                        You can gain points when reading the content within the chapters, contributing to the discussion board and answering questions within the quiz!
+                        There are three levels of difficulty with a different number of points (XP) assigned:  
                     </Typography>
                     <List>
                         <ListItem>
@@ -87,13 +88,13 @@ const Howtoplay = () => {
                     • Some content is locked and that can be accessed once the final exam is completed for a chapter within a course.   
                     </Typography>
                     <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
-                    • Badges can also be attained for significant achievements at different points of the course.    
+                    • Badges can be attained for significant achievements at different points of the course.    
                     </Typography>
                     <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
                     • The Leaderboard shows the top 5 users who have attained the most number of points.    
                     </Typography>
                     <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
-                    • The progress bar displays how much you have progressed in the course.    
+                    • The progress bar displays your progression in the course.    
                     </Typography>
                     </Grid>
 
