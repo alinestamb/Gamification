@@ -95,14 +95,16 @@ const Howtoplay = () => {
                 <Box bgcolor="#e3e9df" flex={1} p={2} sx={{ marginBottom: '20px', border: '2px solid #c5d1be'}}>
                     <Grid xs={12}>
                     <Typography fontFamily="Gamer" variant="h6" sx={{textDecoration:"underline"}}>Frequently Asked Questions</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>1. How can I contribute to the discussion?</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>1. What is the purpose of this website?</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> The main objective of this website is to increase user engagement and collaboration through a gamified LMS.</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>2. How can I contribute to the discussion?</Typography>
                     <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> Just click on "Type a response" and then click submit to contribute to the discussion.</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>2. How many times can I attempt the quiz.</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>3. How many times can I attempt the quiz.</Typography>
                     <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> You can attempt the quiz as many times as you like. We suggest understanding the content 
                     and revising any areas that you may be having trouble with before re-doing the quiz.</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>3. Why can't I access chapter 2?</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>4. Why can't I access chapter 2?</Typography>
                     <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> To access the next chapters, you need to first pass the final quiz of the previous chapter.</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>4. How can I contribute to the discussion?</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>5. How can I contribute to the discussion?</Typography>
                     <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> Just click on "Type a response" and then click submit to contribute to the discussion.</Typography>
                     </Grid>
                     </Box>
