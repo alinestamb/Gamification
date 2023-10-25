@@ -1,12 +1,70 @@
-.container-quiz {
- padding-top:13px;
- width: 100%;
- margin: 0 auto;
- max-width: 900px;
- display: block;
- font-family: 'Gamer';
+/* TEXTS AND FONTS: */
+/* QuizHome: */
+.button{
+ /* make button smaller --> next question button on quiz pages*/
 }
 
+.button-text
+{
+  color: black;
+  position: absolute;
+  margin-top: -51px;
+  margin-left: 74px;
+  font-size: 26px;
+  font-family: 'Gamer';
+  z-index: 3;
+}
+
+.button-text:active
+{
+  text-decoration: none;
+  text-emphasis-color: black;
+  
+}
+
+.white-text{
+  color: white;
+  position: absolute;
+  margin-top: 37px;
+  margin-left: 158px;
+  font-family: system-ui;
+  font-size: 23px;
+}
+
+
+/* QuizPages: */
+.question-no-text{
+  padding:100px;
+  position:absolute;
+  color: #ffffee;
+  text-decoration: underline;
+  font-family: 'RobotoMonov';
+  font-size: 80px;
+}
+
+.question-text{
+  padding:100px;
+  padding-top:30px;
+  position:absolute;
+  color: #ffffee;
+  font-family: 'RobotoMonov';
+  font-size: 25px;
+  margin-top: 230px;
+  max-width: 50%;
+  
+}
+
+
+/* CONTAINERS AND IMAGES: */
+
+/* QuizHome: */
+.container-quiz {
+  padding-top:13px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  font-family: 'Gamer';
+ }
 
 .quiz-image-stack { 
   display: grid;
@@ -15,21 +73,26 @@
 }
 
 .quiz-image-stack__item--bottom {
-  grid-column: 4 / -1;
+  grid-column: 5 / -2;
   grid-row: 1;
+  padding-top: 35%;
+  padding-left: 5%;
+  z-index: 2;   
 }
 
 .quiz-image-stack__item--top {
   grid-row: 1;
   grid-column: 1 / span 8;
-  padding-top: 20%; 
+  padding-top: 13px; 
   z-index: 1; 
 }
 
 .quiz-img {
-  width: 100%;
+  max-width: 100%;
   display: block;
 }
+
+/* QuizPages: */
 
 
 

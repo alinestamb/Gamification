@@ -8,6 +8,7 @@ import Aboutus from './mainpages/aboutus';
 import Profile from './mainpages/profile.js';
 import Chapters from "./mainextpages/chapters";
 import QuizHome from "./mainextpages/quiz_home";
+import QuizPages from "./mainextpages/quiz";
  
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path = "/chapters" element={<Chapters/>}/>
           <Route path="/quizhome" element={<QuizHome/>}/>
+          <Route path="/quiz" element={<QuizPages/>} />
         </Routes>
     </Router>
   );
