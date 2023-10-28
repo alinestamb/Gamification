@@ -3,7 +3,7 @@ import Navbar from '../components/navbar'
 import { Box, List, ListItem, ThemeProvider, Typography, Grid, Button, Stack } from '@mui/material';
 // import Robotomono from '../fonts/robotomono';
 import '../fonts/fonts.css';
-import img from '../assets/howtoplay.png';
+import img from '../assets/howtoplay.gif';
 
 const Howtoplay = () => {
     return (
@@ -28,25 +28,25 @@ const Howtoplay = () => {
                 How to Play?
             </Typography>
         </Box>
-        <Box sx={{ flexGrow: 1 }} >
+        <Box sx={{ flexGrow: 1, marginTop:"20px"}} >
             <Grid item xs={12}>
               <List>            
                 <Stack direction="row" spacing={2}>
                 <ListItem>
                   <Button variant="outlined" disabled style={{borderRadius:"40px", backgroundColor:"#F5B92C", color:"black", height:"90px"}} >
-                    <Typography variant='h6' fontFamily="Gamer">01.</Typography> <Typography fontFamily="Gamer">
+                    <Typography variant='h6' fontFamily="Gamer" color="#b30000">01.</Typography> <Typography fontFamily="Gamer">
                         Read through the course content</Typography>
                     </Button>
                 </ListItem>
                 <ListItem>
                     <Button variant="outlined" disabled style={{borderRadius:"40px", backgroundColor:"#F5B92C", color:"black", height:"90px"}}>
-                        <Typography variant='h6' fontFamily="Gamer">02.</Typography> <Typography fontFamily="Gamer">
+                        <Typography variant='h6' fontFamily="Gamer" color="#b30000">02.</Typography> <Typography fontFamily="Gamer">
                             Collect points and ask questions in Q&A to deepen understanding</Typography>
                     </Button>
                 </ListItem>
                 <ListItem>
                     <Button variant="outlined" disabled style={{borderRadius:"40px", backgroundColor:"#F5B92C", color:"black", height:"90px"}}>
-                        <Typography variant='body1' fontFamily="Gamer">03.</Typography> <br/> <Typography variant="body1" fontFamily="Gamer">
+                        <Typography variant='body1' fontFamily="Gamer" color="#b30000">03.</Typography> <br/> <Typography variant="body1" fontFamily="Gamer">
                             Attempt the final Quiz and get badges!</Typography>
                     </Button>
                 </ListItem>
@@ -55,13 +55,14 @@ const Howtoplay = () => {
             </Grid>
             </Box>
             <Box sx={{ flexGrow: 1 }} >
-            <Grid container spacing={2} p ={2}>
+            <Grid container spacing={2} p ={5}>
                 <Grid item xs={5} md={5}> 
-                    <Box bgcolor="#E5E0E0" flex={1} p={2} sx={{ marginBottom: '20px', border: '2px solid #c1c1c1', width:"500px" }}>
+                    <Box bgcolor="#E5E0E0" flex={1} p={2} sx={{ margin: '20px', border: '2px solid #c1c1c1', width:"560px", height:"432px" }}>
                     <Grid xs={12}>
-                    <Typography variant='h6' fontFamily="Gamer" gutterBottom>Rules</Typography>
+                    <Typography variant='h6' fontFamily="Gamer" gutterBottom>Rules</Typography> <hr />
                     <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
-                        There are three levels of difficulty assigned to each course material and question in the quiz and they each give a different number of points (XP).  
+                        You can gain points when reading the content within the chapters, contributing to the discussion board and answering questions within the quiz!
+                        There are three levels of difficulty with a different number of points (XP) assigned:  
                     </Typography>
                     <List>
                         <ListItem>
@@ -83,7 +84,18 @@ const Howtoplay = () => {
                             <Typography fontFamily="Gamer" sx={{fontSize:"12px"}}>15PX</Typography>
                         </ListItem>
                     </List>
-                    
+                    <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
+                    • Some content is locked and that can be accessed once the final exam is completed for a chapter within a course.   
+                    </Typography>
+                    <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
+                    • Badges can be attained for significant achievements at different points of the course.    
+                    </Typography>
+                    <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
+                    • The Leaderboard shows the top 5 users who have attained the most number of points.    
+                    </Typography>
+                    <Typography fontFamily="RobotoMonov" gutterBottom sx={{fontSize:"14px"}}>
+                    • The progress bar displays your progression in the course.    
+                    </Typography>
                     </Grid>
 
                     </Box>
@@ -92,18 +104,27 @@ const Howtoplay = () => {
 
 {/* Right Column */}
                 <Grid item xs={7} md={7}> 
-                <Box bgcolor="#e3e9df" flex={1} p={2} sx={{ marginBottom: '20px', border: '2px solid #c5d1be'}}>
+                <Box bgcolor="#e3e9df" flex={1} p={2.2} sx={{ margin: '20px', border: '2px solid #c5d1be'}}>
                     <Grid xs={12}>
-                    <Typography fontFamily="Gamer" variant="h6" sx={{textDecoration:"underline"}}>Frequently Asked Questions</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>1. How can I contribute to the discussion?</Typography>
+                    <Typography fontFamily="Gamer" variant="h6">Frequently Asked Questions</Typography> <hr />
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>1. What is the purpose of this website?</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> The main objective of this website is to increase user engagement and collaboration through a gamified LMS.</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>2. How can I contribute to the discussion?</Typography>
                     <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> Just click on "Type a response" and then click submit to contribute to the discussion.</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>2. How many times can I attempt the quiz.</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>3. How many times can I attempt the quiz.</Typography>
                     <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> You can attempt the quiz as many times as you like. We suggest understanding the content 
                     and revising any areas that you may be having trouble with before re-doing the quiz.</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>3. Why can't I access chapter 2?</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> To access the next chapters, you need to first pass the final quiz of the previous chapter.</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>4. How can I contribute to the discussion?</Typography>
-                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> Just click on "Type a response" and then click submit to contribute to the discussion.</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"16px", color:"Green"}}>4. Why can't I access chapter 2?</Typography>
+                    <Typography fontFamily="RobotoMonov" sx={{fontSize:"14px"}}> To access the next chapters, you need to first pass the final quiz of the previous chapter.</Typography> <br />
+                    <Typography fontFamily="Gamer" variant="h6">MORE QUESTIONS?</Typography> <hr />
+                    <Grid>
+                    <Stack direction="row">
+                        <List>
+                        <ListItem><Typography fontFamily="RobotoMonov" sx={{fontSize:"16px"}}> Got more Questions? Contact us on:  
+                        <Button fontFamily="RobotoMonov" color = "secondary" href = "https://www.uts.edu.au/" sx={{fontSize:"14px", color:"blue", textAlign:'center',}}>student@uts.edu.au</Button> </Typography></ListItem>
+                    </List>
+                    </Stack>
+                    </Grid>
                     </Grid>
                     </Box>
                 </Grid> 
