@@ -1,20 +1,43 @@
 {
-   "userIds": [{"id":"1", "name": "guest","points":1}, {"id":"2","name": "user", "points":0}],
-   "1":{
-        "dailyStreak":1,
-        "points":1,
-        "completed": 1,
-        "isDone":["chapter1.section1"],
-        "name":"guest",
-        "badges":["badge1", "badge3"]
+  "1": {
+    "dailyStreak": 1,
+    "points": 2,
+    "completed": null,
+    "isDone": [
+      "chapter1.section1"
+    ],
+    "name": "Guest User 1",
+    "badges": [
+      "badge1",
+      "badge3"
+    ],
+    "bio": "This is the link of the blog post.",
+    "links": "Blog post link",
+    "enrolled": "Introduction to Artifical Intelligence"
+  },
+  "2": {
+    "dailyStreak": 0,
+    "points": 0,
+    "completed": 0,
+    "isDone": [
+      ""
+    ],
+    "name": "user",
+    "badges": [
+      "badge2",
+      "badge5"
+    ]
+  },
+  "userIds": [
+    {
+      "id": "1",
+      "name": "guest",
+      "points": 1
     },
-    "2":{
-            "dailyStreak":0,
-            "points":0,
-            "completed": 0,
-            "isDone":[""],
-            "name" :"user",
-            "badges":["badge2","badge5"]
-        }
-    
+    {
+      "id": "2",
+      "name": "user",
+      "points": 0
+    }
+  ]
 }

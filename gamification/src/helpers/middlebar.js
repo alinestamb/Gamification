@@ -188,7 +188,7 @@ console.log(chapter2opacity);
             <Chapter 
                 title={chapter1Title}
                 sections ={[
-                  <a href="aboutus"  style={{ textDecoration: 'none', color: 'black'}}> {chapter1Section1Title}</a>, 
+                  <a href="chapters"  style={{ textDecoration: 'none', color: 'black'}}> {chapter1Section1Title}</a>, 
                   <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}> {chapter1Section2Title}</a>,
                   <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  {chapter1Section3Title}</a>
                 ]}

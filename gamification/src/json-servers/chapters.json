@@ -8,19 +8,25 @@
       "title": "0.1 Introduction",
       "link": "/helpers/leftsidebar.js",
       "points": 10,
-      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+      "content1": "Chapter 1 Section 1 \n This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
+      "content2" : "Chapter 1 Section 1 \n These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+
     },
     "section2": {
       "title": "02. Background",
       "link": "/chapter1/background",
       "points": 10,
-      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+      "content1": "Chapter 1 Section 2 \n This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
+      "content2" : "Chapter 1 Section 2 \n These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+
     },
     "section3": {
       "title": "03. Literature",
       "link": "/chapter1/literature",
       "points": 10,
-      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+      "content1": "Chapter 1 Section 3 \n This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
+      "content2" : "Chapter 1 Section 3 \n These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+
     },
     "finalQuiz":"Final Quiz 1"
   },
@@ -30,19 +36,25 @@
       "title": "01. Brainstorming",
       "link": "/chapter2/brainstorming",
       "points": 10,
-      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+      "content1": "This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
+      "content2" : "These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+
     },
     "section2": {
       "title": "02. How might we",
       "link": "/chapter2/how-might-we",
       "points": 10,
-      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+      "content1": "This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
+      "content2" : "These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+
     },
     "section3": {
       "title": "03. Decision-making",
       "link": "/chapter2/decision-making",
       "points": 10,
-      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+      "content1": "This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
+      "content2" : "These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+
     },
     "finalQuiz":"Final Quiz 2"
   }
@@ -55,7 +67,9 @@
       "title": "0.1 Introduction",
       "link": "/helpers/leftsidebar.js",
       "points": 10,
-      "content": "What is AI?\nThis is the definition of AI:\n\nThese are some definitions of AI given by someone important.\n- These are some bullet points\n- There are some bullet points\n\nThe following image is about AI."
+      "content1": "This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
+      "content2" : "These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+
     },
     "finalQuiz":"Final Quiz 2"
   }
