@@ -14,8 +14,7 @@
     font-weight: normal;
     font-style: normal;
   }
-
-/* Additional styling (optional) */
+/* Additional styling */
 body {
   font-family: 'Gamer'; /* Use the custom font */
 }
@@ -27,8 +26,6 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
-/* Additional styling (optional) */
 body {
 font-family: 'RobotomonoV'; /* Use the custom font */
 }
@@ -40,8 +37,6 @@ font-family: 'RobotomonoV'; /* Use the custom font */
   font-weight: normal;
   font-style: normal;
 }
-
-/* Additional styling (optional) */
 body {
 font-family: 'Roboto Mono I'; /* Use the custom font */
 }

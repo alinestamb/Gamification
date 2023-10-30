@@ -25,7 +25,8 @@ const Startlearning = () => {
                 transform: 'translate(-50%, -50%)',
                 textAlign:'center',
                 color: 'white',
-                textShadow: '-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000'
+                textShadow: '-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000',
+                fontFamily:"Gamer"
             }}
             >
                 Introduction to Artificial Intelligence

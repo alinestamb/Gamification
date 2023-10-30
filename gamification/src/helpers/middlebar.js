@@ -157,22 +157,25 @@ console.log(isDone.length);
     console.log("chapter2Done" + chapter2Done);
 let chapter1opacity = "";
 let chapter2opacity = "";
-    if (chapter1Done = "auto")
+    if (chapter1Done == "auto")
     {
       chapter1opacity = 1;
-      chapter2opacity = 0.3;
-    }
-    else if (chapter2Done = "auto")
-    {
-      chapter1opacity = 1;
-      chapter2opacity = 1;
+      if (chapter2Done == "auto")
+      {
+        chapter2opacity = 1;
+      }
+      else
+      {
+        chapter2opacity = 0.3;
+      }
     }
     else
     {
       chapter1opacity = 0.3;
       chapter2opacity = 0.3;
     }
-
+console.log(chapter1opacity);
+console.log(chapter2opacity);
 
 
     return(

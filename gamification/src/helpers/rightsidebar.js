@@ -65,7 +65,7 @@ const RightBar = () => {
                 <Typography sx={{fontSize:"10px"}}> &nbsp;{estimate1Time} mins</Typography>
               </ListItem>
             </List>
-        </Grid>
+          </Grid>
         </Grid>
         <br />
         <Grid sx={{border:"2px solid 4f4f4f4"}}>
@@ -84,11 +84,11 @@ const RightBar = () => {
                 <Typography sx={{fontSize:"10px"}}> &nbsp;{estimate2Time} mins</Typography>
               </ListItem>
             </List>
-        </Grid>
+          </Grid>
         </Grid>
       </Box>
     </Box>
-    );
+  );
 };
 
-export default RightBar
+export default RightBar;
