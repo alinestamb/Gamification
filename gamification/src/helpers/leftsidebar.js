@@ -70,10 +70,10 @@ const Sidebar = ({}) => {
               <ListItem>
                 <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}>Badges</Typography>&nbsp;
                 <br />&nbsp;
-                {
+                {/*
                   
                 badges.map((badges) => <img src={badges} alt={"Badge "+badges} style={{ width: '30px', height: '30px' }} />)
-                }
+  */}
                 
                 
               </ListItem>
