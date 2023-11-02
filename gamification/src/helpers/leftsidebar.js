@@ -73,7 +73,7 @@ const Sidebar = ({}) => {
                 {/*
                   
                 badges.map((badges) => <img src={badges} alt={"Badge "+badges} style={{ width: '30px', height: '30px' }} />)
-                */}
+  */}
                 
                 
               </ListItem>
