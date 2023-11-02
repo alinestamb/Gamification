@@ -129,7 +129,7 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
 //console.log(isDone.length);
     let chapter1Done = "";
     let chapter2Done = "";
-/*
+
     for (let i = 0; i<isDone.length; i++)
     {
       console.log(isDone[i]);
@@ -151,7 +151,7 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
         chapter2Done = "none";
       }
 
-    }*/
+    }
 
     console.log("chapter1Done" + chapter1Done);
     console.log("chapter2Done" + chapter2Done);

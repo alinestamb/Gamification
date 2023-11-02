@@ -4,9 +4,22 @@ import { Box, List, ListItem, ThemeProvider, Typography, Grid, Button, Stack } f
 import '../fonts/fonts.css';
 //import img from '../assets/aboutus.jpg';
 import img from '../assets/aboutus_2.gif';
+import { CommentSection } from 'react-comments-section';
+import "react-comments-section/dist/index.css";
 
 
 const Aboutus = () => {
+    const data = [
+        {
+          userId: "02b",
+          comId: "017",
+          fullName: "User",
+          text: "I think you have a point🤔",
+          avatarUrl: "https://ui-avatars.com/api/name=User&background=random",
+          replies: []
+        }
+      ];
+
     return(
         <Box sx={{ flexGrow: 1, backgroundColor:"#ffe", minHeight: "100vh" }}>
         <Navbar/>
@@ -45,6 +58,19 @@ const Aboutus = () => {
             </Grid>
             </Box>
             </Box>
+            <CommentSection
+      currentUser={{
+        currentUserId: "01a",
+        currentUserImg:
+          "https://ui-avatars.com/api/name=GuestUser&background=random",
+        currentUserFullName: "Guest User"
+      }}
+      logIn={{
+        loginLink: "http://localhost:3001/",
+        signupLink: "http://localhost:3001/"
+      }}
+      commentData={data}
+    />
         </Box>
     );
 };

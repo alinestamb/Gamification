@@ -18,15 +18,19 @@ const QuizPages = () => {
 
  if (mc_1_or_sa_2 === 1) {
    content = (
-     <div className="question-text" style={{ marginTop: '220px', fontSize: '20px', color: 'black' }}>
+     <div className="question-text" style={{ marginTop: '220px', textSizeAdjust: '100px', color: 'black' }}>
         <div class="multiple-choice-grid">
             <div class="multiple-choice-button">
-            <Button style={{color:'black', fontFamily: "RobotoMonov"}} >
-                            NXT QUESTION
-                       </Button> </div>
-            <div class="multiple-choice-button">2</div>
-            <div class="multiple-choice-button">3</div>  
-            <div class="multiple-choice-button">4</div>
+               <button style={{color:'black', fontFamily: "RobotoMonov"}} > NXT QUESTION </button>
+             </div>
+            <div class="multiple-choice-button">
+            <button style={{color:'black', fontFamily: "RobotoMonov"}} > NXT Answer 2 </button>
+            </div>
+            <div class="multiple-choice-button">
+            <button style={{color:'black', fontFamily: "RobotoMonov"}} > NXT answer 3 </button></div>  
+            <div class="multiple-choice-button">
+            <button style={{color:'black', fontFamily: "RobotoMonov"}} > NXT answer 4 </button>
+            </div>
         </div>
     </div>
     
