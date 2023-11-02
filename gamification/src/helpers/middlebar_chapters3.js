@@ -4,13 +4,11 @@ import book from "../assets/book.png";
 import '../helpers/middlebar_chapters.css'
 
 
-
-  const Middlebar = () => {
+  const Middlebar3 = () => {
     const [points, setPoints] = useState(null);
     const [content1, setContent1] = useState(null);
     const [content2, setContent2] = useState(null);
     const [title, setTitle] = useState(null);
-
 
     
     useEffect(() => {
@@ -20,16 +18,16 @@ import '../helpers/middlebar_chapters.css'
       })
         .then((response) => response.json())
         .then((data) => {
-          setPoints(data.chapter1.section1.points);
-          setTitle(data.chapter1.section1.title);
-          setContent1 (data.chapter1.section1.content1);
-          setContent2 (data.chapter1.section1.content2);
+          setPoints(data.chapter1.section3.points);
+          setTitle(data.chapter1.section3.title);
+          setContent1 (data.chapter1.section3.content1);
+          setContent2 (data.chapter1.section3.content2);
         })
         .catch((error) => console.log(error));
     }, []);
     
 
-    const [isDone, setIsDone] = useState([]);
+    const [isDone, setIsDone] = useState(null);
     let [userPoints, setUserPoints] = useState(null);
     let [ userCompleted, setUserCompleted] = useState(null);
 
@@ -42,69 +40,66 @@ import '../helpers/middlebar_chapters.css'
         .then((data) => {
           setIsDone(data.isDone);
           setUserPoints(data.points);
-          setUserCompleted (data.completed);        
+          setUserCompleted (data.completed);
         })
         .catch((error) => console.log(error));
-    }, []);  
+    }, []);
 
-   
-    const handleNextSection  = (e) =>  {
-        e.preventDefault();
-        if ( isDone[0] == "chapter1.section1")
-        {
-          console.log(true);
-          window.location.href='http://localhost:3000/chapters2'
-        }
-        else {
-
-        console.log("updating points and completed");
-        console.log(points);
-        console.log(userPoints);
-        console.log(points+userPoints);
-        let newPoints = points+userPoints;
-        setUserPoints(newPoints);
-        setUserCompleted (userCompleted++);
-        setIsDone(isDone.push("chapter1.section1"));
+    
+     
+    const handleNextSection = (e) => {
       
-        
-        const dataToUpdate={
-           points: newPoints,
-           completed: userCompleted,
-           isDone : isDone
-        }
-        const jsonString = JSON.stringify(dataToUpdate);
-        const url = "http://localhost:3002/1" ;
-        const options = {
-            method: 'PATCH',
-            headers : {
-                'Content-Type': 'application/json'
-            },
-            body : jsonString
-        }
-        fetch (url, options)
-        .then(response => {
-            if (!response.ok)
-            {
-                throw new Error(`HIIP error ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(updatedData => {
-            console.log('Data updated: ', updatedData);
-        })
-        .catch (error => {
-            console.log('Error updating data:', error);
-        });
-        window.location.href='http://localhost:3000/chapters2'
+      e.preventDefault();
+      if ( isDone[2] == "chapter1.section3")
+      {
+        console.log(true);
+        window.location.href='http://localhost:3000/quizhome'
       }
-    
-    };
+      else {
+
+
+      let newPoints = points+userPoints;
+      setUserPoints(newPoints);
+      setUserCompleted (userCompleted++);
+      setIsDone(isDone.push("chapter1.section3"));
     
       
-    
-    
+      const dataToUpdate={
+         points: newPoints,
+         completed: userCompleted,
+         isDone : isDone
+      }
+      const jsonString = JSON.stringify(dataToUpdate);
   
-
+      const url = "http://localhost:3002/1" ;
+  
+      const options = {
+          method: 'PATCH',
+          headers : {
+              'Content-Type': 'application/json'
+          },
+          body : jsonString
+      }
+  
+      fetch (url, options)
+      .then(response => {
+          if (!response.ok)
+          {
+              throw new Error(`HIIP error ${response.status}`);
+          }
+          return response.json();
+      })
+      .then(updatedData => {
+          console.log('Data updated: ', updatedData);
+      })
+      .catch (error => {
+          console.log('Error updating data:', error);
+      });
+      window.location.href='http://localhost:3000/quizhome'
+    }
+      
+    }
+    
 
 
     return(
@@ -130,9 +125,9 @@ import '../helpers/middlebar_chapters.css'
     
             <div class ="nxtpagebutton nxtpagebutton-text">
             
-            <Button sx={{color:'white'}} onClick= {handleNextSection} >
+            <a href = "quizhome"> <Button sx={{color:'white'}} onClick= {handleNextSection} >
                 NXT PG
-               </Button> 
+               </Button> </a>
                 
             </div>
                      
@@ -145,4 +140,4 @@ import '../helpers/middlebar_chapters.css'
 
 
 
-export default Middlebar;
+export default Middlebar3;

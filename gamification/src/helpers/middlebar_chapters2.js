@@ -3,9 +3,7 @@ import React, {useState, useEffect} from 'react';
 import book from "../assets/book.png";
 import '../helpers/middlebar_chapters.css'
 
-
-
-  const Middlebar = () => {
+  const Middlebar2 = () => {
     const [points, setPoints] = useState(null);
     const [content1, setContent1] = useState(null);
     const [content2, setContent2] = useState(null);
@@ -19,19 +17,20 @@ import '../helpers/middlebar_chapters.css'
         
       })
         .then((response) => response.json())
-        .then((data) => {
-          setPoints(data.chapter1.section1.points);
-          setTitle(data.chapter1.section1.title);
-          setContent1 (data.chapter1.section1.content1);
-          setContent2 (data.chapter1.section1.content2);
+         .then((data) => {
+          setPoints(data.chapter1.section2.points);
+          setTitle(data.chapter1.section2.title);
+          setContent1 (data.chapter1.section2.content1);
+          setContent2 (data.chapter1.section2.content2);
         })
         .catch((error) => console.log(error));
     }, []);
     
 
-    const [isDone, setIsDone] = useState([]);
+    const [isDone, setIsDone] = useState(null);
     let [userPoints, setUserPoints] = useState(null);
     let [ userCompleted, setUserCompleted] = useState(null);
+    
 
     useEffect(() => {
       fetch("http://localhost:3002/1", {
@@ -42,29 +41,27 @@ import '../helpers/middlebar_chapters.css'
         .then((data) => {
           setIsDone(data.isDone);
           setUserPoints(data.points);
-          setUserCompleted (data.completed);        
+          setUserCompleted (data.completed);
         })
         .catch((error) => console.log(error));
-    }, []);  
+    }, []);
 
-   
-    const handleNextSection  = (e) =>  {
-        e.preventDefault();
-        if ( isDone[0] == "chapter1.section1")
-        {
-          console.log(true);
-          window.location.href='http://localhost:3000/chapters2'
-        }
-        else {
+        
+    const handleNextSection = (e) => {
+    
+      e.preventDefault();
+      if ( isDone[1] == "chapter1.section2")
+      {
+        console.log(true);
+        window.location.href='http://localhost:3000/chapters3'
+      }
+      else {
 
-        console.log("updating points and completed");
-        console.log(points);
-        console.log(userPoints);
-        console.log(points+userPoints);
+      
         let newPoints = points+userPoints;
         setUserPoints(newPoints);
         setUserCompleted (userCompleted++);
-        setIsDone(isDone.push("chapter1.section1"));
+        setIsDone(isDone.push("chapter1.section2"));
       
         
         const dataToUpdate={
@@ -72,40 +69,37 @@ import '../helpers/middlebar_chapters.css'
            completed: userCompleted,
            isDone : isDone
         }
-        const jsonString = JSON.stringify(dataToUpdate);
-        const url = "http://localhost:3002/1" ;
-        const options = {
-            method: 'PATCH',
-            headers : {
-                'Content-Type': 'application/json'
-            },
-            body : jsonString
-        }
-        fetch (url, options)
-        .then(response => {
-            if (!response.ok)
-            {
-                throw new Error(`HIIP error ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(updatedData => {
-            console.log('Data updated: ', updatedData);
-        })
-        .catch (error => {
-            console.log('Error updating data:', error);
-        });
-        window.location.href='http://localhost:3000/chapters2'
-      }
-    
-    };
-    
-      
-    
-    
+      const jsonString = JSON.stringify(dataToUpdate);
   
-
-
+      const url = "http://localhost:3002/1" ;
+  
+      const options = {
+          method: 'PATCH',
+          headers : {
+              'Content-Type': 'application/json'
+          },
+          body : jsonString
+      }
+  
+      fetch (url, options)
+      .then(response => {
+          if (!response.ok)
+          {
+              throw new Error(`HIIP error ${response.status}`);
+          }
+          return response.json();
+      })
+      .then(updatedData => {
+          console.log('Data updated: ', updatedData);
+      })
+      .catch (error => {
+          console.log('Error updating data:', error);
+      });
+      window.location.href='http://localhost:3000/chapters3'
+    }
+      
+    }
+    
 
     return(
     <Box sx={{ flexGrow: 1, margin:"30px"}}>
@@ -130,9 +124,9 @@ import '../helpers/middlebar_chapters.css'
     
             <div class ="nxtpagebutton nxtpagebutton-text">
             
-            <Button sx={{color:'white'}} onClick= {handleNextSection} >
+            <a href = "chapters3"> <Button sx={{color:'white'}} onClick= {handleNextSection} >
                 NXT PG
-               </Button> 
+               </Button> </a>
                 
             </div>
                      
@@ -144,5 +138,4 @@ import '../helpers/middlebar_chapters.css'
 };
 
 
-
-export default Middlebar;
+export default Middlebar2;

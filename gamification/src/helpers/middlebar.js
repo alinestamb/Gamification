@@ -189,8 +189,8 @@ console.log(chapter2opacity);
                 title={chapter1Title}
                 sections ={[
                   <a href="chapters"  style={{ textDecoration: 'none', color: 'black'}}> {chapter1Section1Title}</a>, 
-                  <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}> {chapter1Section2Title}</a>,
-                  <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  {chapter1Section3Title}</a>
+                  <a href="chapters2" style={{ textDecoration: 'none', color: 'black'}}> {chapter1Section2Title}</a>,
+                  <a href="chapters3" style={{ textDecoration: 'none', color: 'black'}}>  {chapter1Section3Title}</a>
                 ]}
                 finalQuiz={<a href="quizhome" style={{ textDecoration: 'none', color: 'black'}}>{chapter1FinalQuizTitle}</a>}
                 image={ch1img}
@@ -200,11 +200,11 @@ console.log(chapter2opacity);
             <Chapter class="chapter2"
                 title={chapter2Title}
                 sections={[
-                  <a href="aboutus" style={{ textDecoration: 'none', color: 'black'}}>   {chapter2Section1Title}</a>, 
-                  <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}>  {chapter2Section2Title}</a>,
-                  <a href="chapters" style={{ textDecoration: 'none', color: 'black'}}> {chapter2Section3Title}</a>
+                  <a href="chapters4" style={{ textDecoration: 'none', color: 'black'}}>   {chapter2Section1Title}</a>, 
+                  <a href="chapters5" style={{ textDecoration: 'none', color: 'black'}}>  {chapter2Section2Title}</a>,
+                  <a href="chapters6" style={{ textDecoration: 'none', color: 'black'}}> {chapter2Section3Title}</a>
                 ]}
-                finalQuiz={<a href="quizhome" style={{ textDecoration: 'none', color: 'black', pointerEvents: chapter2Done}}>{chapter2FinalQuizTitle}</a>}
+                finalQuiz={<a href="quizhome1" style={{ textDecoration: 'none', color: 'black', pointerEvents: chapter2Done}}>{chapter2FinalQuizTitle}</a>}
                 image={ch2Img}
                 isDisabled={chapter2Done}
                 greyedOut = {chapter2opacity}

@@ -4,13 +4,27 @@ import {Button} from "@mui/material";
 
 function LeaderBoard(){
   const [array] = useState([]);
+  const [points, setPoints] = useState(null);
+
+
+  useEffect(() => {
+    fetch("http://localhost:3002/1", {
+      method: "GET",
+      
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setPoints(data.points);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   useEffect(() => {
     fetch("http://localhost:3002/userIds" , {
       method: "GET",
     })
       .then((response) => response.json())
       .then((data) => {
-      //  console.log(data);
         
         data.sort((s1, s2) => {
           return s2.points - s1.points;
@@ -73,7 +87,7 @@ array.map((array)=>{
         backgroundColor: '#5a8da1'}}}>
       <span style={{ color: 'white'}}>1. </span>&nbsp;
       <span style={{ color: 'white'}}> Guest </span>&nbsp;
-      <span style={{ color: '#f5b92c'}}>1 </span>
+      <span style={{ color: '#f5b92c'}}>{points} </span>
       
   </Button>
 
