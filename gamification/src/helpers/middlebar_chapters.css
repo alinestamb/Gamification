@@ -4,7 +4,7 @@
 
     .left-book{
       position: absolute;
-      top: 79px;
+      top: 14%;
       left: 82px;
       font-size: 18px;
       max-width: 330px;
@@ -22,6 +22,7 @@
         font-size: 18px;
         max-width: 330px;
         max-height: 65%;
+        padding-right: 20px;
         height: 90%; /* Set the height to 100% */
         overflow: auto; /* Enable scrollability */
       }
@@ -31,7 +32,8 @@
     background-color:#ffffff00;
     border: 1px solid #522A29;
     border-radius: 16px;
-    width:10px
+    width:10px;
+
 }
 
 /* background of the scrollbar except button or resizer */

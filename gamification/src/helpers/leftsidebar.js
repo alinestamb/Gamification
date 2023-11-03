@@ -70,11 +70,37 @@ const Sidebar = ({}) => {
               <ListItem>
                 <Typography sx = {{fontSize:'12px', fontFamily:"Gamer"}}>Badges</Typography>&nbsp;
                 <br />&nbsp;
-                {/*
+                {
                   
                 badges.map((badges) => <img src={badges} alt={"Badge "+badges} style={{ width: '30px', height: '30px' }} />)
-  */}
-                
+                }
+                <img src={badge1}
+                style={{width:'15%', height:'15%'}}
+                onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
+                onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+                />
+                <img src={badge2}
+                style={{width:'15%', height:'15%'}}
+                onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
+                onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+                />
+                <img src={badge3}
+                style={{width:'15%', height:'15%'}}
+                onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
+                onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+                />
+                <img src={badge4}
+                style={{width:'15%', height:'15%'}}
+                onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
+                onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+                />
+                <img src={badge5}
+                style={{width:'15%', height:'15%'}}
+                onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
+                onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+                />
+
+                              
                 
               </ListItem>
             </List>

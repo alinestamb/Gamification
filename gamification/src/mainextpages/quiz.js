@@ -20,8 +20,14 @@ const QuizPages = () => {
    content = (
      <div className="question-text" style={{ marginTop: '220px', textSizeAdjust: '100px', color: 'black' }}>
         <div class="multiple-choice-grid">
-            <div class="multiple-choice-button">
-               <button style={{color:'black', fontFamily: "RobotoMonov"}} > NXT QUESTION </button>
+            <div class="multiple-choice-button"
+            
+            onMouseOver={(e) => { e.target.style.filter = 'brightness(50%)'; }}
+            onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+            >
+               <button style={{color:'black', fontFamily: "RobotoMonov"}} > NXT QUESTION 
+                                                  </button>
+                                                  
              </div>
             <div class="multiple-choice-button">
             <button style={{color:'black', fontFamily: "RobotoMonov"}} > NXT Answer 2 </button>
