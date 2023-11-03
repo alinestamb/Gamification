@@ -153,7 +153,7 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
         chapter2Done = "none";
       }*/
 
-    } */
+  
 
     chapter2Done = "auto";
         chapter1Done = "auto";
