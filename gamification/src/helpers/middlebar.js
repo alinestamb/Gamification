@@ -131,8 +131,8 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
 //console.log(isDone.length);
     let chapter1Done = "";
     let chapter2Done = "";
-
-    for (let i = 0; i<isDone.length; i++)
+/*
+    for (let i = 0; i<8; i++)
     {
       console.log(isDone[i]);
       console.log(isDone[i].includes("chapter1.section1"));
@@ -153,7 +153,10 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
         chapter2Done = "none";
       }
 
-    }
+    } */
+
+    chapter2Done = "auto";
+        chapter1Done = "auto";
 
     console.log("chapter1Done" + chapter1Done);
     console.log("chapter2Done" + chapter2Done);
