@@ -131,8 +131,8 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
 //console.log(isDone.length);
     let chapter1Done = "";
     let chapter2Done = "";
-
-    for (let i = 0; i<isDone.length; i++)
+/*
+    for (let i = 0; i<8; i++)
     {
       console.log(isDone[i]);
       console.log(isDone[i].includes("chapter1.section1"));
@@ -153,7 +153,10 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
         chapter2Done = "none";
       }*/
 
-    }
+    } */
+
+    chapter2Done = "auto";
+        chapter1Done = "auto";
 
     console.log("chapter1Done" + chapter1Done);
     console.log("chapter2Done" + chapter2Done);
@@ -190,11 +193,11 @@ console.log(chapter2opacity);
             <Chapter 
                 title={chapter1Title}
                 sections ={[
-                  <a href="chapters"  style={{ textDecoration: 'none', color: 'black'}}> {chapter1Section1Title}</a>, 
-                  <a href="chapters2" style={{ textDecoration: 'none', color: 'black'}}> {chapter1Section2Title}</a>,
-                  <a href="chapters3" style={{ textDecoration: 'none', color: 'black'}}>  {chapter1Section3Title}</a>
+                  <a href="chapters"  style={{ textDecoration: 'none', color: 'black',lineHeight:'16px', letterSpacing:'-1px'}}> {chapter1Section1Title}</a>, 
+                  <a href="chapters2" style={{ textDecoration: 'none', color: 'black',lineHeight:'16px', letterSpacing:'-1px'}}> {chapter1Section2Title}</a>,
+                  <a href="chapters3" style={{ textDecoration: 'none', color: 'black',lineHeight:'16px', letterSpacing:'-1px'}}>  {chapter1Section3Title}</a>
                 ]}
-                finalQuiz={<a href="quizhome" style={{ textDecoration: 'none', color: 'black'}}>{chapter1FinalQuizTitle}</a>}
+                finalQuiz={<a href="quizhome" style={{ textDecoration: 'none', color: 'black',lineHeight:'16px', letterSpacing:'-1px'}}>{chapter1FinalQuizTitle}</a>}
                 image={ch1img}
                 isDisabled={chapter1Done}
                 greyedOut = {chapter1opacity}
@@ -202,12 +205,12 @@ console.log(chapter2opacity);
             <Chapter class="chapter2"
                 title={chapter2Title}
                 sections={[
-                  <a href="chapters4" style={{ textDecoration: 'none', color: 'black'}}>   {chapter2Section1Title}</a>, 
-                  <a href="chapters5" style={{ textDecoration: 'none', color: 'black'}}>  {chapter2Section2Title}</a>,
-                  <a href="chapters6" style={{ textDecoration: 'none', color: 'black'}}> {chapter2Section3Title}</a>,
-                  <a href="chapters7" style={{ textDecoration: 'none', color: 'black'}}> {chapter2Section4Title}</a>
+                  <a href="chapters4" style={{ textDecoration: 'none', color: 'black',lineHeight:'16px', letterSpacing:'-1px'}}>   {chapter2Section1Title}</a>, 
+                  <a href="chapters5" style={{ textDecoration: 'none', color: 'black',lineHeight:'16px', letterSpacing:'-1px'}}>  {chapter2Section2Title}</a>,
+                  <a href="chapters6" style={{ textDecoration: 'none', color: 'black',lineHeight:'16px', letterSpacing:'-1px'}}> {chapter2Section3Title}</a>,
+                  <a href="chapters7" style={{ textDecoration: 'none', color: 'black',lineHeight:'16px', letterSpacing:'-1px'}}> {chapter2Section4Title}</a>
                 ]}
-                finalQuiz={<a href="quizhome1" style={{ textDecoration: 'none', color: 'black', pointerEvents: chapter2Done}}>{chapter2FinalQuizTitle}</a>}
+                finalQuiz={<a href="quizhome1" style={{ textDecoration: 'none', color: 'black',lineHeight:'16px', letterSpacing:'-1px',pointerEvents: chapter2Done}}>{chapter2FinalQuizTitle}</a>}
                 image={ch2Img}
                 isDisabled={chapter2Done}
                 greyedOut = {chapter2opacity}

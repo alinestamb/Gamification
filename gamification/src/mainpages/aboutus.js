@@ -49,7 +49,7 @@ const Aboutus = () => {
                 </Typography>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'center',  alignItems: 'center' }}>
-            <Box bgcolor="#E5E0E0" flex={1} p={2} sx={{ marginBottom: '20px', border: '2px solid #c1c1c1', maxWidth: '1200px' }} >
+            <Box bgcolor="#E5E0E0" flex={1} p={2} sx={{ marginBottom: '20px', border: '2px solid #c1c1c1', maxWidth: '1200px', marginTop:'40px', padding:'33px'}} >
             <Grid item xs={12}>
                     <Typography variant='h5' fontFamily="Gamer">WHO ARE WE</Typography> <hr />
                     <Typography fontFamily="RobotoMonoV"> We are are group of 3 university students who are looking to improve tertiary education.</Typography> <br />

@@ -23,16 +23,15 @@ console.log(questionNo);
                 <div class="question-text"  > What is the description of an AI, a per the quote given by the author .... ?</div>
     <div className="question-text" style={{ marginTop: '220px', textSizeAdjust: '100px', color: 'black' }}>
         <div class="multiple-choice-grid">
-            <div class="multiple-choice-button">
-                  <button onClick = { console.log('clicked')} style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}} >
-                       
-                            <img onClick = { console.log('clicked')} src={button} alt="buttonpng"   />  
-                            <div onClick = { console.log('clicked')}class="button-text"> Answer 1</div>
 
-                            {/* onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
-                            onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }} */}
-                                             
-                  </button>              
+            <div class="multiple-choice-button"
+            
+            onMouseOver={(e) => { e.target.style.filter = 'brightness(50%)'; }}
+            onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+            >
+               <button style={{color:'black', fontFamily: "RobotoMonov"}} > NXT QUESTION 
+                                                  </button>
+                                                  
              </div>
             <div class="multiple-choice-button">
             <button onClick = { questionNo++} style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>

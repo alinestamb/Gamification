@@ -171,8 +171,8 @@ import "react-comments-section/dist/index.css";
         </Typography>        
         <div class="book-container">
            <img src={book} alt="Book" style={{ maxWidth: '100%'}} />
-            <div class = "left-book scrollbar" style={{fontSize: '25px', top:'40px', paddingRight:'11px', whiteSpace: 'pre-wrap'}}> <br /><p>{content1}</p><br /><br/> </div>
-            <div class="right-book"style={{fontSize:'25px', top:'90px', marginRight:'50px', whiteSpace: 'pre-wrap'}}> {content2} </div>
+            <div class = "left-book scrollbar" style={{fontSize: '25px', top:'14%', paddingRight:'11px', whiteSpace: 'pre-wrap'}}> {content1}</div>
+            <div class="right-book"style={{fontSize:'25px', top:'14%', marginRight:'50px', whiteSpace: 'pre-wrap'}}> {content2} </div>
            {/* <div class="right-book"style={{fontSize:'20px', top:'170px'}}>  <br /><br />    - These are some bullet points.<br />
                                                                                             - These are some bullet points.<br />
                                                                                             - These are some more bullet points.<br /><br />
