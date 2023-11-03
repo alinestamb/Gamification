@@ -3,72 +3,104 @@
   "course1": {
     "name": "Introduction to AI",
   "chapter1": {
-    "name":"Definitions",
+    "name":"What is AI?",
     "section1": {
-      "title": "0.1 Introduction",
+      "title": "0.1 Definition of AI",
       "link": "/helpers/leftsidebar.js",
       "points": 5,
-      "content1": "Chapter 1 Section 1 \n This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
-      "content2" : "Chapter 1 Section 1 \n These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+      "content1": "There are four approaches too developing AI. \n \n- The cognitive modelling approach. \n \n- The 'Law of Thought' approach \n \n- The Turing Test approach\n \n- The Rational Agent approach ",
+      "content2" : "These approaches frame the way that AI can be defined as.",
+      
+      "data" : [{
+        "userId": "02b",
+        "comId": "017",
+        "fullName": "User",
+        "text": "What's the difference between the Law of Thought approach and Rational Agent approach?",
+        "avatarUrl": "https://ui-avatars.com/api/name=user&background=random",
+        "replies": [
+          {
+              "userId": "02a",
+              "comId": "013",
+              "fullName": "Another User",
+              "avatarUrl": "https://ui-avatars.com/api/name=AnotherUser&background=random",
+              "text": "A rational agent acts to achieve the best possible outcome in its present circumstances. But in a law of thought, the agent has to act according to logical statements."
+              
+            }
+        ]
+      }]
 
     },
     "section2": {
-      "title": "02. Background",
+      "title": "02. Difference between AI, ML and DL",
       "link": "/chapter1/background",
       "points": 10,
-      "content1": "Chapter 1 Section 2 \n This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
-      "content2" : "Chapter 1 Section 2 \n These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+      "content1": "AI: Artifical Intelligence \n Any technique that enables computers to mimic human intelligence, using logic, if-then rules, inference and reasoning and machine learning. \n \n ML: Machine Learning \n A subset of AI that enables machines to improve at tasks with experience.",
+      "content2" : "DL: Deep Learning \n A subset of machine learning composed of algorithms that permit software to train itself to perform tasks like speech recognition and image processing, by exposing multilayered neural networks to vast amounts of data. "
 
     },
     "section3": {
-      "title": "03. Literature",
+      "title": "03. What concepts/ problem types are there?",
       "link": "/chapter1/literature",
       "points": 15,
-      "content1": "Chapter 1 Section 3 \n This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
-      "content2" : "Chapter 1 Section 3 \n These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+      "content1": "These problems will be explored further in the next section: \n \n- Navigational Search Problems\n \n- Simple Optimisation Problem \n \n- Simple Classification and Regression Problems \n \n- Neural Network Models ",
+      "content2" : "- Markov Decision Process for Reinforcement Learning\n \n- Reinforcement Learning \n \n- Convolutional Neural Networks for Image Classification \n \n- Natural Language Processing"
 
     },
     "finalQuiz":"Final Quiz 1"
   },
   "chapter2": {
-    "name":"Processes",
+    "name":"AI Problem Types",
     "section1": {
-      "title": "01. Brainstorming",
+      "title": "01. Navigational Search and Simple Optimisation Problems",
       "link": "/chapter2/brainstorming",
       "points": 10,
-      "content1": "This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
-      "content2" : "These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+      "content1": "Navigational Search Problems (Uninformed/ Informed) \n\n - Breadth First Search \n\n - Depth First Search \n\n - Uniform Cost Search \n\n - Greedy Best First Search \n\n - A-star Search ",
+      "content2" : "Simple Optimisation Problems: \n\n - Hill Climbing \n\n - Simulated Annealing \n\n - Genetic Algorithm "
 
     },
     "section2": {
-      "title": "02. How might we",
+      "title": "02. Classification, Regression and Neural Network Problems ",
       "link": "/chapter2/how-might-we",
       "points": 10,
-      "content1": "This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
-      "content2" : "These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+      "content1": "Simple Classification and Regression Problems: \n\n - Decision tree learning \n\n - Random Forest \n\n - Support vector machine learning \n\n - Linear regression/ logistic regression \n\n - K-nearest neighbours learning",
+      "content2" : "Neural Network Models: \n\n - Perceptron Model: binary \n\n - Multilayer perceptron / Forward neural networks (FNN): binary or multi-class or regression problems. They can have single or multiple output. \n\n - Recurrent neural network (RNN): time series prediction \n\n - Long-term short memory (LSTM): time series prediction "
 
     },
     "section3": {
-      "title": "03. Decision-making",
+      "title": "03. MDP and Reinforcement Learning",
       "link": "/chapter2/decision-making",
       "points": 10,
-      "content1": "This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
-      "content2" : "These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
-
+      "content1": "Markov Decision Process (MDP) for Reinforcement Learning Algorithms:\n \n - Value Iteration: Utility Value \n\n - Policy Iteration: Optimal Policy",
+      "content2" : "Reinforcement Learning: \n\n Passive RL algorithms include: \n - Direct Utility Estimation (DUE) \n - Adaptative dynamic programming (ADP) \n - Temporal Difference (TD) \n \n Active RL algorithm includes: \n - Q-Learning"
+    },
+    "section4": {
+      "title": "04. CNN and NLP",
+      "link": "/chapter2/decision-making",
+      "points": 10,
+      "content1": "Convolutional Neural Networks (CNN) for Image Classification: \n\n - Self-defined CNN \n\n - AlexNet \n\n - Yolo Detection",
+      "content2" : "Natural Language Processing (NLP): \n\n 1. Tokenisation \n\n 2. Extract n-grams from a given corpus \n\n 3. Word 2 vec \n\n 4. Sentiment Analysis \n\n Sentiment Analysis techniques include: \n - Naive Bayes \n - LR \n - SVM \n - Decision Trees \n - LSTM \n - Pretrained Transformers."
     },
     "finalQuiz":"Final Quiz 2"
   }
   },
   
   "course2": {
-    "name": "Introduction to Cloud Computing",
+    "name": "Introduction to a Gamified LMS",
   "chapter1": {
     "section1": {
-      "title": "0.1 Introduction",
+      "title": "What's our difference",
       "link": "/helpers/leftsidebar.js",
       "points": 10,
-      "content1": "This is the definition of AI:\n \nThese are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points\n \nThe following page talks more about AI.",
-      "content2" : "These are some definitions of AI given by someone important.\n \n- These are some bullet points\n- There are some bullet points"
+      "content1": "Our student focused approach and our gamified elements.",
+      "content2" : ""
+
+    },
+    "section2": {
+      "title": "How our pages work",
+      "link": "/helpers/leftsidebar.js",
+      "points": 10,
+      "content1": "To access your pages, navigate to content and if there is a quiz applicable and unlocked, you can access it.",
+      "content2" : "Look at how to play for more information on how our point system works."
 
     },
     "finalQuiz":"Final Quiz 2"

@@ -1,17 +1,15 @@
 import { Typography, Box, Button} from '@mui/material'; 
 import React, {useState, useEffect} from 'react';
 import book from "../assets/book.png";
-import '../helpers/middlebar_chapters.css'
+import '../helpers/middlebar_chapters.css';
 import { CommentSection } from 'react-comments-section';
 import "react-comments-section/dist/index.css";
 
-  const Middlebar2 = () => {
+  const Middlebar7 = () => {
     const [points, setPoints] = useState(null);
     const [content1, setContent1] = useState(null);
     const [content2, setContent2] = useState(null);
     const [title, setTitle] = useState(null);
-
-
     
     useEffect(() => {
       fetch("http://localhost:3001/course1", {
@@ -19,11 +17,11 @@ import "react-comments-section/dist/index.css";
         
       })
         .then((response) => response.json())
-         .then((data) => {
-          setPoints(data.chapter1.section2.points);
-          setTitle(data.chapter1.section2.title);
-          setContent1 (data.chapter1.section2.content1);
-          setContent2 (data.chapter1.section2.content2);
+        .then((data) => {
+          setPoints(data.chapter2.section4.points);
+          setTitle(data.chapter2.section4.title);
+          setContent1 (data.chapter2.section4.content1);
+          setContent2 (data.chapter2.section4.content2);
         })
         .catch((error) => console.log(error));
     }, []);
@@ -32,7 +30,6 @@ import "react-comments-section/dist/index.css";
     const [isDone, setIsDone] = useState(null);
     let [userPoints, setUserPoints] = useState(null);
     let [ userCompleted, setUserCompleted] = useState(null);
-    
 
     useEffect(() => {
       fetch("http://localhost:3002/1", {
@@ -66,29 +63,27 @@ import "react-comments-section/dist/index.css";
         ]
       }
     ];
-        
     const handleNextSection = (e) => {
-    
       e.preventDefault();
-      if ( isDone[1] == "chapter1.section2")
+      if ( isDone[7] == "chapter2.section4")
       {
         console.log(true);
-        window.location.href='http://localhost:3000/chapters3'
+        window.location.href='http://localhost:3000 '
       }
       else {
 
+
+      let newPoints = points+userPoints;
+      setUserPoints(newPoints);
+      setUserCompleted (userCompleted++);
+      setIsDone(isDone.push("chapter2.section4"));
+    
       
-        let newPoints = points+userPoints;
-        setUserPoints(newPoints);
-        setUserCompleted (userCompleted++);
-        setIsDone(isDone.push("chapter1.section2"));
-      
-        
-        const dataToUpdate={
-           points: newPoints,
-           completed: userCompleted,
-           isDone : isDone
-        }
+      const dataToUpdate={
+         points: newPoints,
+         completed: userCompleted,
+         isDone : isDone
+      }
       const jsonString = JSON.stringify(dataToUpdate);
   
       const url = "http://localhost:3002/1" ;
@@ -115,16 +110,14 @@ import "react-comments-section/dist/index.css";
       .catch (error => {
           console.log('Error updating data:', error);
       });
-      window.location.href='http://localhost:3000/chapters3'
+      window.location.href='http://localhost:3000'
     }
-      
     }
     
-
     return(
     <Box sx={{ flexGrow: 1, margin:"30px"}}>
        <Typography >
-            <h1>  {title} - {points} XP  </h1>  
+            <h1>  {title}  - {points} XP </h1>  
         </Typography>        
         <div class="book-container">
            <img src={book} alt="Book" style={{ maxWidth: '100%'}} />
@@ -144,9 +137,9 @@ import "react-comments-section/dist/index.css";
     
             <div class ="nxtpagebutton nxtpagebutton-text">
             
-            <a href = "chapters3"> <Button sx={{color:'white'}} onClick= {handleNextSection} >
+            <Button sx={{color:'white'}} onClick= {handleNextSection} >
                 NXT PG
-               </Button> </a>
+               </Button>
                 
             </div>
                      
@@ -170,4 +163,5 @@ import "react-comments-section/dist/index.css";
 };
 
 
-export default Middlebar2;
+
+export default Middlebar7;

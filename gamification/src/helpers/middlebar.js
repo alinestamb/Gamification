@@ -68,7 +68,7 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
       })
       .catch((error) => console.log(error));
   }, []);
-    var progressValue = completed/8 *100;
+    var progressValue = completed/9 *100;
 
     const courseId = "course1";
     const userId = "1";
@@ -82,6 +82,7 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
     const [chapter2Section2Title, setChapter2Section2Title] = useState(null);
     const [chapter2Section3Title, setChapter2Section3Title] = useState(null);
     const [chapter2FinalQuizTitle, setChapter2FinalQuizTitle] = useState(null);
+    const [chapter2Section4Title, setChapter2Section4Title] = useState(null);
 
 
 
@@ -105,6 +106,7 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
           setChapter2Section2Title(data.chapter2.section2.title);
           setChapter2Section3Title(data.chapter2.section3.title);
           setChapter2FinalQuizTitle(data.chapter2.finalQuiz);
+          setChapter2Section4Title(data.chapter2.section4.title);
           
         })
         .catch((error) => console.log(error));
@@ -202,7 +204,8 @@ console.log(chapter2opacity);
                 sections={[
                   <a href="chapters4" style={{ textDecoration: 'none', color: 'black'}}>   {chapter2Section1Title}</a>, 
                   <a href="chapters5" style={{ textDecoration: 'none', color: 'black'}}>  {chapter2Section2Title}</a>,
-                  <a href="chapters6" style={{ textDecoration: 'none', color: 'black'}}> {chapter2Section3Title}</a>
+                  <a href="chapters6" style={{ textDecoration: 'none', color: 'black'}}> {chapter2Section3Title}</a>,
+                  <a href="chapters7" style={{ textDecoration: 'none', color: 'black'}}> {chapter2Section4Title}</a>
                 ]}
                 finalQuiz={<a href="quizhome1" style={{ textDecoration: 'none', color: 'black', pointerEvents: chapter2Done}}>{chapter2FinalQuizTitle}</a>}
                 image={ch2Img}

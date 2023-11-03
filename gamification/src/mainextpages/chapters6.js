@@ -5,7 +5,7 @@
 // chapterData.js
 
 import Sidebar from '../helpers/leftsidebar';
-import Middlebar2 from '../helpers/middlebar_chapters2';
+import Middlebar6 from '../helpers/middlebar_chapters6';
 import RightBar from '../helpers/rightsidebar';
 import Navbar from '../components/navbar';
 import backgroundImg from '../assets/ai.png'; // Import the image
@@ -106,7 +106,7 @@ const Chapters2 = () => {
 
 {/* Middle Column */}
                 <Grid item xs={6.7} md={6.7}> 
-                <Middlebar2/>
+                <Middlebar6/>
 
                 </Grid>
 

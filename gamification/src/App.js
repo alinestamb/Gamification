@@ -12,6 +12,7 @@ import Chapters3 from "./mainextpages/chapters3";
 import Chapters4 from "./mainextpages/chapters4";
 import Chapters5 from "./mainextpages/chapters5";
 import Chapters6 from "./mainextpages/chapters6";
+import Chapters7 from "./mainextpages/chapters7";
 import QuizHome from "./mainextpages/quiz_home";
 import QuizPages from "./mainextpages/quiz";
  
@@ -31,6 +32,7 @@ function App() {
           <Route path = "/chapters4" element={<Chapters4/>}/>
           <Route path = "/chapters5" element={<Chapters5/>}/>
           <Route path = "/chapters6" element={<Chapters6/>}/>
+          <Route path = "/chapters7" element={<Chapters7/>}/>
           <Route path="/quizhome" element={<QuizHome/>}/>
           <Route path="/quiz" element={<QuizPages/>} />
         </Routes>

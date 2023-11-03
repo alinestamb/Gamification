@@ -1,7 +1,9 @@
 import { Typography, Box, Button} from '@mui/material'; 
 import React, {useState, useEffect} from 'react';
 import book from "../assets/book.png";
-import '../helpers/middlebar_chapters.css'
+import '../helpers/middlebar_chapters.css';
+import { CommentSection } from 'react-comments-section';
+import "react-comments-section/dist/index.css";
 
   const Middlebar6 = () => {
     const [points, setPoints] = useState(null);
@@ -43,7 +45,24 @@ import '../helpers/middlebar_chapters.css'
         .catch((error) => console.log(error));
     }, []);
 
-   
+    const data = [
+      {
+        userId: "02b",
+        comId: "017",
+        fullName: "User",
+        text: "I think you have a point🤔",
+        avatarUrl: "https://ui-avatars.com/api/name=user&background=random",
+        replies: [
+          {
+              "userId": "02a",
+              "comId": "013",
+              "fullName": "Adam Scott",
+              "avatarUrl": "https://ui-avatars.com/api/name=Adam&background=random",
+              "text": "Thanks! It took me 1 month to finish this project but I am glad it helped out someone!🥰"
+            },
+        ]
+      }
+    ];
     const handleNextSection = (e) => {
       e.preventDefault();
       if ( isDone[6] == "chapter2.section3")
@@ -126,7 +145,19 @@ import '../helpers/middlebar_chapters.css'
                      
           
          </div>
-
+         <CommentSection
+      currentUser={{
+        currentUserId: "01a",
+        currentUserImg:
+          "https://ui-avatars.com/api/name=GuestUser&background=random",
+        currentUserFullName: "Guest User"
+      }}
+      logIn={{
+        loginLink: "http://localhost:3001/",
+        signupLink: "http://localhost:3001/"
+      }}
+      commentData={data}
+    />
          </Box>
   );
 };

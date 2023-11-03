@@ -2,6 +2,8 @@ import { Typography, Box, Button} from '@mui/material';
 import React, {useState, useEffect} from 'react';
 import book from "../assets/book.png";
 import '../helpers/middlebar_chapters.css'
+import { CommentSection } from 'react-comments-section';
+import "react-comments-section/dist/index.css";
 
 
 
@@ -10,6 +12,8 @@ import '../helpers/middlebar_chapters.css'
     const [content1, setContent1] = useState(null);
     const [content2, setContent2] = useState(null);
     const [title, setTitle] = useState(null);
+    const [comment, setComment] = useState(null);
+    const [commentData, setCommentData] = useState([]);
 
 
     
@@ -24,6 +28,7 @@ import '../helpers/middlebar_chapters.css'
           setTitle(data.chapter1.section1.title);
           setContent1 (data.chapter1.section1.content1);
           setContent2 (data.chapter1.section1.content2);
+          setCommentData(data.chapter1.section1.data);
         })
         .catch((error) => console.log(error));
     }, []);
@@ -47,7 +52,17 @@ import '../helpers/middlebar_chapters.css'
         .catch((error) => console.log(error));
     }, []);  
 
-   
+    if (commentData != null)
+    {
+      console.log ("commentData is not null");
+      console.log(commentData);
+    }
+    else {
+      console.log("comment data is null")
+    }
+   function handleCommentSubmit(commentData) {
+    console.log (commentData);
+   }
     const handleNextSection  = (e) =>  {
         e.preventDefault();
         if ( isDone[0] == "chapter1.section1")
@@ -100,12 +115,9 @@ import '../helpers/middlebar_chapters.css'
     
     };
     
-      
-    
-    
-  
 
 
+    
 
     return(
     <Box sx={{ flexGrow: 1, margin:"30px"}}>
@@ -138,6 +150,23 @@ import '../helpers/middlebar_chapters.css'
                      
           
          </div>
+         
+         <CommentSection
+      currentUser={{
+        currentUserId: "01a",
+        currentUserImg:
+          "https://ui-avatars.com/api/name=GuestUser&background=random",
+        currentUserFullName: "Guest User"
+      }}
+      logIn={{
+        loginLink: "http://localhost:3001/",
+        signupLink: "http://localhost:3001/"
+      }}
+      commentData={commentData}
+      //onSubmitAction={(commentData) =>  setComment(commentData)}
+      onSubmitAction = {handleCommentSubmit(commentData)}
+    
+    />
 
          </Box>
   );

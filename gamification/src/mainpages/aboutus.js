@@ -4,8 +4,6 @@ import { Box, List, ListItem, ThemeProvider, Typography, Grid, Button, Stack } f
 import '../fonts/fonts.css';
 //import img from '../assets/aboutus.jpg';
 import img from '../assets/aboutus_2.gif';
-import { CommentSection } from 'react-comments-section';
-import "react-comments-section/dist/index.css";
 
 
 const Aboutus = () => {
@@ -15,8 +13,16 @@ const Aboutus = () => {
           comId: "017",
           fullName: "User",
           text: "I think you have a point🤔",
-          avatarUrl: "https://ui-avatars.com/api/name=User&background=random",
-          replies: []
+          avatarUrl: "https://ui-avatars.com/api/name=user&background=random",
+          replies: [
+            {
+                "userId": "02a",
+                "comId": "013",
+                "fullName": "Adam Scott",
+                "avatarUrl": "https://ui-avatars.com/api/name=Adam&background=random",
+                "text": "Thanks! It took me 1 month to finish this project but I am glad it helped out someone!🥰"
+              },
+          ]
         }
       ];
 
@@ -58,19 +64,7 @@ const Aboutus = () => {
             </Grid>
             </Box>
             </Box>
-            <CommentSection
-      currentUser={{
-        currentUserId: "01a",
-        currentUserImg:
-          "https://ui-avatars.com/api/name=GuestUser&background=random",
-        currentUserFullName: "Guest User"
-      }}
-      logIn={{
-        loginLink: "http://localhost:3001/",
-        signupLink: "http://localhost:3001/"
-      }}
-      commentData={data}
-    />
+      
         </Box>
     );
 };
