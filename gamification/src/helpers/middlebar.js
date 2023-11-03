@@ -138,20 +138,20 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
       console.log(isDone[i].includes("chapter1.section1"));
       console.log(isDone[i].includes("chapter1"));
  
-      if(isDone[i].includes("chapter1") == true)
+      if(isDone[i].includes("chapter1.section1") == true && isDone[i].includes("chapter2.section1") == false)
       {
         chapter1Done = "auto";
         chapter2Done = "none";
       }
-      else if (isDone[i].includes("chapter2") == true)
+      else //if (isDone[i].includes("chapter2") == true)
       {
         chapter2Done = "auto";
         chapter1Done = "auto";
-      }
+      } /*
       else{
         chapter1Done = "none";
         chapter2Done = "none";
-      }
+      }*/
 
     }
 

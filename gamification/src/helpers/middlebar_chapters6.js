@@ -11,6 +11,9 @@ import "react-comments-section/dist/index.css";
     const [content2, setContent2] = useState(null);
     const [title, setTitle] = useState(null);
     
+    let [comment, setComment] = useState(null);
+    const [commentData, setCommentData] = useState([]);
+
     useEffect(() => {
       fetch("http://localhost:3001/course1", {
         method: "GET",
@@ -26,6 +29,16 @@ import "react-comments-section/dist/index.css";
         .catch((error) => console.log(error));
     }, []);
     
+    useEffect(() => {
+      fetch("http://localhost:3004/chapter1.section6", {
+        method: "GET",
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        setCommentData(data.commentData);
+      })
+      .catch((error) => console.log(error));
+    }, []);
 
     const [isDone, setIsDone] = useState(null);
     let [userPoints, setUserPoints] = useState(null);
@@ -45,24 +58,61 @@ import "react-comments-section/dist/index.css";
         .catch((error) => console.log(error));
     }, []);
 
-    const data = [
-      {
-        userId: "02b",
-        comId: "017",
-        fullName: "User",
-        text: "I think you have a point🤔",
-        avatarUrl: "https://ui-avatars.com/api/name=user&background=random",
-        replies: [
-          {
-              "userId": "02a",
-              "comId": "013",
-              "fullName": "Adam Scott",
-              "avatarUrl": "https://ui-avatars.com/api/name=Adam&background=random",
-              "text": "Thanks! It took me 1 month to finish this project but I am glad it helped out someone!🥰"
-            },
-        ]
+    console.log(comment);
+    console.log (commentData);
+    let i = 0;
+    if (comment == null)
+    {
+      console.log(comment);
+      console.log('comment has not been added');
+    }
+    else 
+    {
+      if ( i == 0) {
+        
+        console.log('comment has been added');
+        console.log(comment);
+        commentData.push(comment);
+        console.log(commentData);
+       
+        // adding to discussion thread
+        const dataToUpdate = {
+          commentData : commentData
+        }
+        
+        const jsonString = JSON.stringify(dataToUpdate);
+          const url = "http://localhost:3004/chapter1.section6" ;
+          const options = {
+              method: 'PATCH',
+              headers : {
+                  'Content-Type': 'application/json'
+              },
+              body : jsonString
+          }
+          fetch (url, options)
+          .then(response => {
+              if (!response.ok)
+              {
+                  throw new Error(`HIIP error ${response.status}`);
+              }
+              return response.json();
+          })
+          .then(updatedData => {
+              console.log('Data updated: ', updatedData);
+          })
+          .catch (error => {
+              console.log('Error updating data:', error);
+          });
+
+          i = 1;
+
+
+
       }
-    ];
+
+     
+      
+    }
     const handleNextSection = (e) => {
       e.preventDefault();
       if ( isDone[6] == "chapter2.section3")
@@ -156,7 +206,8 @@ import "react-comments-section/dist/index.css";
         loginLink: "http://localhost:3001/",
         signupLink: "http://localhost:3001/"
       }}
-      commentData={data}
+      commentData={commentData}
+      onSubmitAction={(commentData) =>  setComment(commentData) }
     />
          </Box>
   );

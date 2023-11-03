@@ -15,6 +15,7 @@ import Chapters6 from "./mainextpages/chapters6";
 import Chapters7 from "./mainextpages/chapters7";
 import QuizHome from "./mainextpages/quiz_home";
 import QuizPages from "./mainextpages/quiz";
+import QuizPages1 from "./mainextpages/quiz1";
  
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path = "/chapters7" element={<Chapters7/>}/>
           <Route path="/quizhome" element={<QuizHome/>}/>
           <Route path="/quiz" element={<QuizPages/>} />
+          <Route path="/quiz1" element={<QuizPages1/>} />
         </Routes>
     </Router>
   );

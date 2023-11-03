@@ -12,8 +12,9 @@ import "react-comments-section/dist/index.css";
     const [content1, setContent1] = useState(null);
     const [content2, setContent2] = useState(null);
     const [title, setTitle] = useState(null);
-    const [comment, setComment] = useState(null);
+    let [comment, setComment] = useState(null);
     const [commentData, setCommentData] = useState([]);
+    
 
 
     
@@ -28,11 +29,21 @@ import "react-comments-section/dist/index.css";
           setTitle(data.chapter1.section1.title);
           setContent1 (data.chapter1.section1.content1);
           setContent2 (data.chapter1.section1.content2);
-          setCommentData(data.chapter1.section1.data);
+          
         })
         .catch((error) => console.log(error));
     }, []);
     
+    useEffect(() => {
+      fetch("http://localhost:3004/chapter1.section1", {
+        method: "GET",
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        setCommentData(data.commentData);
+      })
+      .catch((error) => console.log(error));
+    }, []);
 
     const [isDone, setIsDone] = useState([]);
     let [userPoints, setUserPoints] = useState(null);
@@ -52,23 +63,102 @@ import "react-comments-section/dist/index.css";
         .catch((error) => console.log(error));
     }, []);  
 
-    if (commentData != null)
-    {
-      console.log ("commentData is not null");
-      console.log(commentData);
-    }
-    else {
-      console.log("comment data is null")
-    }
-   function handleCommentSubmit(commentData) {
+   
+    console.log(comment);
     console.log (commentData);
-   }
+    let i = 0;
+    if (comment == null)
+    {
+      console.log(comment);
+      console.log('comment has not been added');
+    }
+    else 
+    {
+      if ( i == 0) {
+        
+        console.log('comment has been added');
+        console.log(comment);
+        commentData.push(comment);
+        console.log(commentData);
+       
+        // adding to discussion thread
+        const dataToUpdate = {
+          commentData : commentData
+        }
+        
+        const jsonString = JSON.stringify(dataToUpdate);
+          const url = "http://localhost:3004/chapter1.section1" ;
+          const options = {
+              method: 'PATCH',
+              headers : {
+                  'Content-Type': 'application/json'
+              },
+              body : jsonString
+          }
+          fetch (url, options)
+          .then(response => {
+              if (!response.ok)
+              {
+                  throw new Error(`HIIP error ${response.status}`);
+              }
+              return response.json();
+          })
+          .then(updatedData => {
+              console.log('Data updated: ', updatedData);
+          })
+          .catch (error => {
+              console.log('Error updating data:', error);
+          });
+
+          i = 1;
+
+
+
+      }
+
+     
+      
+    }
     const handleNextSection  = (e) =>  {
         e.preventDefault();
         if ( isDone[0] == "chapter1.section1")
         {
-          console.log(true);
-          window.location.href='http://localhost:3000/chapters2'
+   
+
+          
+          let newPoints = userPoints + 15;
+          setUserPoints(newPoints);
+          
+          const dataToUpdate={
+            points: newPoints,
+
+         }
+         const jsonString = JSON.stringify(dataToUpdate);
+         const url = "http://localhost:3002/1" ;
+         const options = {
+             method: 'PATCH',
+             headers : {
+                 'Content-Type': 'application/json'
+             },
+             body : jsonString
+         }
+         fetch (url, options)
+         .then(response => {
+             if (!response.ok)
+             {
+                 throw new Error(`HIIP error ${response.status}`);
+             }
+             return response.json();
+         })
+         .then(updatedData => {
+             console.log('Data updated: ', updatedData);
+         })
+         .catch (error => {
+             console.log('Error updating data:', error);
+         });
+         window.location.href='http://localhost:3000/chapters2'
+        
+          
         }
         else {
 
@@ -76,7 +166,7 @@ import "react-comments-section/dist/index.css";
         console.log(points);
         console.log(userPoints);
         console.log(points+userPoints);
-        let newPoints = points+userPoints;
+        let newPoints = points+userPoints+15;
         setUserPoints(newPoints);
         setUserCompleted (userCompleted++);
         setIsDone(isDone.push("chapter1.section1"));
@@ -163,8 +253,8 @@ import "react-comments-section/dist/index.css";
         signupLink: "http://localhost:3001/"
       }}
       commentData={commentData}
-      //onSubmitAction={(commentData) =>  setComment(commentData)}
-      onSubmitAction = {handleCommentSubmit(commentData)}
+      onSubmitAction={(commentData) =>  setComment(commentData) }
+     // onSubmitAction = {handleCommentSubmit(commentData)}
     
     />
 

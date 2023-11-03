@@ -102,8 +102,24 @@ array.map((array)=>{
       '&:hover': {
         backgroundColor: '#5a8da1'}}}>
       <span style={{ color: 'white'}}>2. </span>&nbsp;
+      <span style={{ color: 'white'}}> John Smith </span>&nbsp;
+      <span style={{ color: '#f5b92c'}}>20 </span>
+      
+  </Button>
+
+  <Button variant = "contained" sx={{
+      width:'200px', 
+      background:'#5a8da1', 
+      marginBottom:'10px',
+      borderRadius:'20px',
+      height: '25px', 
+      fontFamily:"Gamer", 
+      fontSize:"10px",
+      '&:hover': {
+        backgroundColor: '#5a8da1'}}}>
+      <span style={{ color: 'white'}}>3. </span>&nbsp;
       <span style={{ color: 'white'}}> User </span>&nbsp;
-      <span style={{ color: '#f5b92c'}}>0 </span>
+      <span style={{ color: '#f5b92c'}}>15 </span>
       
   </Button>
    </>

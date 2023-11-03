@@ -1,7 +1,7 @@
 {
   "1": {
     "dailyStreak": 1,
-    "points": 70,
+    "points": 35,
     "completed": 7,
     "isDone": [
       "chapter1.section1",
@@ -11,9 +11,12 @@
       "chapter2.section1",
       "chapter2.section2",
       "chapter2.section3",
-      "chapter2.section4"
+      "chapter2.section4",
+      "chapter1.section2",
+      "chapter1.section3"
     ],
     "name": "Guest User 1",
+    "commentNo": 1,
     "badges": [
       "badge1",
       "badge3"
@@ -30,6 +33,7 @@
       ""
     ],
     "name": "user",
+    "commentNo": 1,
     "badges": [
       "badge2",
       "badge5"
@@ -44,7 +48,12 @@
     {
       "id": "2",
       "name": "user",
-      "points": 0
+      "points": 15
+    },
+    {
+      "id": "3",
+      "name": "John Smith",
+      "points": 20
     }
   ]
 }
