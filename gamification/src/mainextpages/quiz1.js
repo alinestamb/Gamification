@@ -75,11 +75,11 @@ const QuizPages1 = () => {
                 <div class="question-text"  > What is the description of an AI, a per the quote given by the author .... ?</div>
                 
                 {content}
-                <button style={{marginLeft: '-210px', marginTop:'260px', width: '149px', height: '44px', paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'10%'}}>
+                {/* <button style={{marginLeft: '-210px', marginTop:'260px', width: '149px', height: '44px', paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'10%'}}>
                        <Button sx={{color:'black', fontFamily: "RobotoMonov"}} >
                             NEXT QUESTION
                        </Button>     
-                  </button>
+                  </button> */}
 
              <div class="quiz-image-stack__item quiz-image-stack__item--top">
                 <img src={Quiz_MC_Background} alt="Quiz MC Background" style={{maxWidth: '150%', padding:'0px',}} />

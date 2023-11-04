@@ -118,7 +118,7 @@ import "react-comments-section/dist/index.css";
       if ( isDone[6] == "chapter2.section3")
       {
         console.log(true);
-        window.location.href='http://localhost:3000 '
+        window.location.href='http://localhost:3000/chapters7'
       }
       else {
 
@@ -160,7 +160,7 @@ import "react-comments-section/dist/index.css";
       .catch (error => {
           console.log('Error updating data:', error);
       });
-      window.location.href='http://localhost:3000'
+      window.location.href='http://localhost:3000/chapters7'
     }
     }
     

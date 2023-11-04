@@ -1,19 +1,12 @@
 {
   "1": {
     "dailyStreak": 1,
-    "points": 35,
-    "completed": 7,
+    "points": 20,
+    "completed": 2,
     "isDone": [
       "chapter1.section1",
-      "chapter1.section2",
-      "chapter1.section3",
-      "finalQuiz1",
-      "chapter2.section1",
-      "chapter2.section2",
-      "chapter2.section3",
-      "chapter2.section4",
-      "chapter1.section2",
-      "chapter1.section3"
+      "chapter1.section2"
+      
     ],
     "name": "Guest User 1",
     "commentNo": 1,

@@ -9,18 +9,33 @@ import badge2 from "../assets/badges/badge2.png" ;
 import badge3 from "../assets/badges/badge3.png" ;
 import badge4 from "../assets/badges/badge4.png" ;
 import badge5 from "../assets/badges/badge5.png" ;
+import badge6 from "../assets/badges/badge6.png" ;
+import badge7 from "../assets/badges/badge7.png" ;
+import badge8 from "../assets/badges/badge8.png" ;
+
 import Img3 from '../assets/completed.png';
 
 
 import Leaderboard from "../components/leaderboard.js";
 // &nbsp; - space 
+
 const Sidebar = ({}) => {
   const [completed, setCompleted] = useState(null);
   const [dailyStreak, setDailyStreak] = useState(null);
   const [points, setPoints] = useState(null);
   const [name, setName] = useState(null);
   const [badges, setBadges] = useState([]);
-  let BadgeName = "";
+
+  let displayBadge1 = "none";
+  let displayBadge2 = "none";
+  let displayBadge3 = "none";
+  let displayBadge4 = "none";
+  let displayBadge5 = "none";
+  let displayBadge6 = "none";
+  let displayBadge7 = "none";
+  let displayBadge8 = "none";
+
+  
 
   const userId = "1";
   useEffect(() => {
@@ -40,6 +55,22 @@ const Sidebar = ({}) => {
       })
       .catch((error) => console.log(error));
   }, []);
+console.log('badges' , badges);
+
+
+
+// idk
+  displayBadge4 = "auto";
+  displayBadge5 = "auto";
+  displayBadge8 = "auto";
+  displayBadge7 = "auto";
+  
+  // comment badge 4
+  // if how to play badge 5
+  // reader finish chapter badge 8
+  // personalisation badge 7
+
+
 
   return (
     <ThemeProvider theme={Robotomono}>
@@ -72,30 +103,47 @@ const Sidebar = ({}) => {
                 <br />&nbsp;
                 {
                   
-                badges.map((badges) => <img src={badges} alt={"Badge "+badges} style={{ width: '30px', height: '30px' }} />)
+              //  badges.map((badges) => <img src={badges} alt={"Badge "+badges} style={{ width: '30px', height: '30px' }} />)
+              
                 }
                 <img src={badge1}
-                style={{width:'15%', height:'15%'}}
+                style={{width:'20%', height:'20%', display: displayBadge1}}
                 onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
                 onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+                
                 />
                 <img src={badge2}
-                style={{width:'15%', height:'15%'}}
+                style={{width:'20%', height:'20%', display: displayBadge2}}
                 onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
                 onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
                 />
                 <img src={badge3}
-                style={{width:'15%', height:'15%'}}
+                style={{width:'20%', height:'20%', display: displayBadge3}}
                 onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
                 onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
                 />
                 <img src={badge4}
-                style={{width:'15%', height:'15%'}}
+                style={{width:'20%', height:'20%', display: displayBadge4}}
                 onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
                 onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
                 />
                 <img src={badge5}
-                style={{width:'15%', height:'15%'}}
+                style={{width:'20%', height:'20%', display: displayBadge5}}
+                onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
+                onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+                />
+                 <img src={badge6}
+                style={{width:'20%', height:'20%', display: displayBadge6}}
+                onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
+                onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+                />
+                 <img src={badge7}
+                style={{width:'20%', height:'20%', display: displayBadge7}}
+                onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
+                onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
+                />
+                 <img src={badge8}
+                style={{width:'20%', height:'20%', display: displayBadge8}}
                 onMouseOver={(e) => { e.target.style.filter = 'brightness(80%)'; }}
                 onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
                 />

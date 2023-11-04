@@ -128,12 +128,24 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
     }, []);
 
     console.log(isDone);
-//console.log(isDone.length);
     let chapter1Done = "";
     let chapter2Done = "";
-/*
-    for (let i = 0; i<8; i++)
+    if (isDone[0] == "chapter1.section1")
     {
+      chapter1Done = "auto";
+    }
+    if (isDone[3])
+    {
+      chapter2Done = "auto";
+    }
+    console.log(isDone[0]);
+    /*
+//console.log(isDone.length);
+    
+
+    for (let i = 0; i<8; i++)
+    { 
+      console.log(isDone);
       console.log(isDone[i]);
       console.log(isDone[i].includes("chapter1.section1"));
       console.log(isDone[i].includes("chapter1"));
@@ -147,17 +159,19 @@ const Chapter = ({ title, sections, finalQuiz, image, isDisabled, greyedOut}) =>
       {
         chapter2Done = "auto";
         chapter1Done = "auto";
-      } /*
+      } 
+    /*
       else{
         chapter1Done = "none";
         chapter2Done = "none";
-      }*/
+      }
 
   
 
     chapter2Done = "auto";
-        chapter1Done = "auto";
-
+     chapter1Done = "auto";
+*/
+  
     console.log("chapter1Done" + chapter1Done);
     console.log("chapter2Done" + chapter2Done);
 let chapter1opacity = "";
