@@ -13,10 +13,12 @@
   color: black;
   position: absolute;
   margin-top: -51px;
-  margin-left: 72px;
-  font-size: 26px;
+  margin-left: 32px;
+  font-size: 15px;
   font-family: 'Gamer';
   z-index: 3;
+  word-wrap: normal;
+  width:450px;
 }
 
 .button-text:active

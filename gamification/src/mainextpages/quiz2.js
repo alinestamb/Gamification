@@ -9,7 +9,7 @@ import Quiz_MC_Background from "../assets/quizassets/Quiz_MC_Background.png";
 
 import Middlebar from '../helpers/middlebar_chapters';
 
-const QuizPages = () => {
+const QuizPages2 = () => {
   document.body.style.backgroundColor = "#615A5A";
 
   
@@ -22,33 +22,33 @@ const QuizPages = () => {
         <div class="multiple-choice-grid">
             <div class="multiple-choice-button">
                   <button style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
-                       <a href="quiz1">
+                       <a href="quizMark">
                             <img src={button} alt="buttonpng"   />  
-                            <div class="button-text" > Law of Thought </div>
+                            <div class="button-text" >7</div>
                        </a>                       
                   </button>              
              </div>
             <div class="multiple-choice-button">
             <button style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
-                       <a href="quiz1">
+                       <a href="quizMark">
                             <img src={button} alt="buttonpng"   />  
-                            <div class="button-text" > Turing Test</div>
+                            <div class="button-text" > 10 </div>
                        </a>                       
                   </button>   
             </div>
             <div class="multiple-choice-button">
             <button style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
-                       <a href="quiz1">
+                       <a href="quizMark">
                             <img src={button} alt="buttonpng"   />  
-                            <div class="button-text" > Cognitive Modelling </div>
+                            <div class="button-text" >8</div>
                        </a>                       
                   </button>  
             </div>  
             <div class="multiple-choice-button">
             <button style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
-                       <a href="quiz1">
+                       <a href="quizMark">
                             <img src={button} alt="buttonpng"   />  
-                            <div class="button-text" > Intelligent Agent </div>
+                            <div class="button-text" > 6</div>
                        </a>                       
                   </button>  
             </div>
@@ -71,8 +71,8 @@ const QuizPages = () => {
       <Box sx={{ flexGrow: 1, backgroundColor:"#615A5A" }}>
         <Navbar/>
            <div class="quiz-image-stack">
-                <div class="question-no-text" > Question No. 1: </div>
-                <div class="question-text"  > Which of these is not an approach to developing AI?</div>
+                <div class="question-no-text" > Question No. 3: </div>
+                <div class="question-text"  > How many different types of problems will we learn about?</div>
                 
                 {content}
                 {/* <button style={{marginLeft: '-210px', marginTop:'260px', width: '149px', height: '44px', paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'10%'}}>
@@ -92,4 +92,4 @@ const QuizPages = () => {
     );
 };
   
-export default QuizPages;
+export default QuizPages2;

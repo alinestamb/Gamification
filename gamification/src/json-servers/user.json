@@ -1,12 +1,13 @@
 {
   "1": {
     "dailyStreak": 1,
-    "points": 20,
-    "completed": 2,
+    "points": 155,
+    "completed": 3,
     "isDone": [
       "chapter1.section1",
-      "chapter1.section2"
-      
+      "chapter1.section2",
+      "chapter1.section3",
+      "finalQuiz1"
     ],
     "name": "Guest User 1",
     "commentNo": 1,
@@ -17,7 +18,7 @@
     "bio": "This is the link of the blog post.",
     "links": "Blog post link",
     "enrolled": "Introduction to Artifical Intelligence",
-    "avatar": "avatar16"
+    "avatar": "avatar1"
   },
   "2": {
     "dailyStreak": 0,

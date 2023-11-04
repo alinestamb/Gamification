@@ -22,33 +22,33 @@ const QuizPages1 = () => {
         <div class="multiple-choice-grid">
             <div class="multiple-choice-button">
                   <button style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
-                       <a href="quiz">
+                       <a href="quiz2">
                             <img src={button} alt="buttonpng"   />  
-                            <div class="button-text" > Answer 1</div>
+                            <div class="button-text" > AI encompasses ML and DL.</div>
                        </a>                       
                   </button>              
              </div>
             <div class="multiple-choice-button">
             <button style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
-                       <a href="quiz">
+                       <a href="quiz2">
                             <img src={button} alt="buttonpng"   />  
-                            <div class="button-text" > Answer 2</div>
+                            <div class="button-text" > DL encompasses AI and ML </div>
                        </a>                       
                   </button>   
             </div>
             <div class="multiple-choice-button">
             <button style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
-                       <a href="quiz">
+                       <a href="quiz2">
                             <img src={button} alt="buttonpng"   />  
-                            <div class="button-text" > Answer 3</div>
+                            <div class="button-text" > ML encompasses AI and DL</div>
                        </a>                       
                   </button>  
             </div>  
             <div class="multiple-choice-button">
             <button style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
-                       <a href="quiz">
+                       <a href="quiz2">
                             <img src={button} alt="buttonpng"   />  
-                            <div class="button-text" > Answer 4</div>
+                            <div class="button-text" > AI encompasses ML but not DL</div>
                        </a>                       
                   </button>  
             </div>
@@ -72,7 +72,7 @@ const QuizPages1 = () => {
         <Navbar/>
            <div class="quiz-image-stack">
                 <div class="question-no-text" > Question No. 2: </div>
-                <div class="question-text"  > What is the description of an AI, a per the quote given by the author .... ?</div>
+                <div class="question-text"  > Which statement is correct?</div>
                 
                 {content}
                 {/* <button style={{marginLeft: '-210px', marginTop:'260px', width: '149px', height: '44px', paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'10%'}}>
