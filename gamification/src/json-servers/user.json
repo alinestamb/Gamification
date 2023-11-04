@@ -23,7 +23,8 @@
     ],
     "bio": "This is the link of the blog post.",
     "links": "Blog post link",
-    "enrolled": "Introduction to Artifical Intelligence"
+    "enrolled": "Introduction to Artifical Intelligence",
+    "avatar": "avatar16"
   },
   "2": {
     "dailyStreak": 0,
@@ -34,6 +35,7 @@
     ],
     "name": "user",
     "commentNo": 1,
+    "avatar": "avatar1",
     "badges": [
       "badge2",
       "badge5"

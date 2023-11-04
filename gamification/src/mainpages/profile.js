@@ -75,6 +75,7 @@ export default function CustomizedDialogs() {
     let [bio, setBio] = useState(null);
     let [link, setLink] = useState(null);
     let [courseName, setCourseName] = useState(null);
+    let [avatar, setAvatar] = useState(null);
     let BadgeName = "";
     
     const handleSubmit = (e) => {
@@ -133,6 +134,7 @@ export default function CustomizedDialogs() {
           setBio(data.bio);
           setLink(data.links);
           setCourseName(data.enrolled);
+          setAvatar (data.avatar);
           
           console.log(data);
         })
@@ -157,12 +159,148 @@ export default function CustomizedDialogs() {
         const handleClose = () => {
           setOpen(false);
           setOpen1(false);
+         
+          if(selectedAvatar != null)
+          {
+            avatar = selectedAvatar;
+            const dataToUpdate={
+                avatar: selectedAvatar,
+               
+            }
+            const jsonString = JSON.stringify(dataToUpdate);
+        
+            const url = "http://localhost:3002/" +userId;
+        
+            const options = {
+                method: 'PATCH',
+                headers : {
+                    'Content-Type': 'application/json'
+                },
+                body : jsonString
+            }
+        
+            fetch (url, options)
+            .then(response => {
+                if (!response.ok)
+                {
+                    throw new Error(`HIIP error ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(updatedData => {
+                console.log('Data updated: ', updatedData);
+            })
+            .catch (error => {
+                console.log('Error updating data:', error);
+            });
+            window.location.reload();
+          }
         };
 
         const handleImageClick = (avatar) => {
             setSelectedAvatar(avatar);
+            
         }
-      
+        let avatarName = '';
+        
+        if (avatar == "avatar1") {
+          avatarName =
+            "http://localhost:3000//static/media/avatar1.b360894f.png";
+        }
+        if (avatar == "avatar2") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar2.9d911d91.png";
+        }
+        if (avatar == "avatar3") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar3.96c870ce.png";
+        }
+        if (avatar == "avatar4") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar4.ed412a38.png";
+        }
+        if (avatar == "avatar5") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar5.1f6e08da.png";
+        }
+        if (avatar == "avatar6") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar6.d62244f6.png";
+        }
+        if (avatar == "avatar7") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar7.588c5a28.png";
+        }
+        if (avatar == "avatar8") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar8.f338543c.png";
+        }
+        if (avatar == "avatar9") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar9.661709cd.png";
+        }
+        if (avatar == "avatar10") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar10.3b21522a.png";
+        }
+        if (avatar == "avatar11") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar11.4ab874b4.png";
+        }
+        if (avatar == "avatar12") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar12.21e354cd.png";
+        }
+        if (avatar == "avatar13") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar13.3b43239c.png";
+        }
+        if (avatar == "avatar14") {
+          avatarName =
+            "	http://localhost:3000/static/media/avatar14.fbff46c3.png";
+        }
+        if (avatar == "avatar15") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar15.6478f264.png";
+        }
+
+        if (avatar == "avatar16") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar16.e4601f42.png";
+        }
+        if (avatar == "avatar17") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar17.f0daa163.png";
+        }
+        if (avatar == "avatar18") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar18.98b154b1.png";
+        }
+        if (avatar == "avatar19") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar19.b21925ca.png";
+        }
+        if (avatar == "avatar20") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar20.40c1dc41.png";
+        }
+        if (avatar == "avatar21") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar21.d37eb13c.png";
+        }
+        if (avatar == "avatar22") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar22.b57fab9c.png";
+        }
+        if (avatar == "avatar23") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar23.4f7c4f1e.png";
+        }
+        if (avatar == "avatar24") {
+          avatarName =
+            "http://localhost:3000/static/media/avatar24.11cb3ac8.png";
+        }
+
         return (
         <Box sx={{ flexGrow: 1, backgroundColor:"#ffe", }}>
         <Navbar />
@@ -175,7 +313,8 @@ export default function CustomizedDialogs() {
         <Grid container spacing={2} style={{margin:"50px", marginLeft:"100px"}}>
                 <Grid item xs={4} md={4} direction={"column"} alignItems={"center"} > 
                 <Grid style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <img src={avatar} alt="avatar" style={{ height: '270px', width: 'auto' }} />
+                    <img src={avatarName} alt="avatar" style={{ height: '270px', width: 'auto' }} />
+                 
                    
                     <Button variant="outlined" onClick={handleClickOpen_avatar} style={{marginBottom: '20px'}}>
                         Customise!
@@ -710,7 +849,7 @@ export default function CustomizedDialogs() {
         </Box>
         
 
-        <Button variant="outlined" onClick={handleClickOpen_badge}>
+         <Button variant="outlined" onClick={handleClickOpen_badge}>
         Open Button Alert dialog
         </Button>
       <BootstrapDialog
@@ -743,7 +882,7 @@ export default function CustomizedDialogs() {
                      You have just recieved a new badge. ✨ 
           </Typography>
           <Typography>
-          <img src={avatar} alt="avatar" style={{ height: '270px', width: 'auto' }} />
+          <img src={avatarName} alt="avatar" style={{ height: '270px', width: 'auto' }} />
           </Typography>
           <Typography>
                  👀 Check out all your badges at your profile.

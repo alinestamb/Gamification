@@ -24,15 +24,20 @@ console.log(questionNo);
     <div className="question-text" style={{ marginTop: '220px', textSizeAdjust: '100px', color: 'black' }}>
         <div class="multiple-choice-grid">
 
-            <div class="multiple-choice-button"
+             <div class="multiple-choice-button"
             
             onMouseOver={(e) => { e.target.style.filter = 'brightness(50%)'; }}
             onMouseOut={(e) => { e.target.style.filter = 'brightness(100%)'; }}
             >
-               <button style={{color:'black', fontFamily: "RobotoMonov"}} > NXT QUESTION 
-                                                  </button>
-                                                  
-             </div>
+          
+          <button onClick = { questionNo++} style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
+                       
+                       <img src={button} alt="buttonpng"   />  
+                       <div class="button-text" > Answer 1</div>
+                                        
+             </button>
+             
+            </div>
             <div class="multiple-choice-button">
             <button onClick = { questionNo++} style={{ paddingBlock: '0px', paddingInline:'0px', borderWidth:'0px', lineHeight:'0px', margintop:'-100%'}}>
                        
