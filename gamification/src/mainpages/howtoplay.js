@@ -4,12 +4,82 @@ import { Box, List, ListItem, ThemeProvider, Typography, Grid, Button, Stack } f
 // import Robotomono from '../fonts/robotomono';
 import '../fonts/fonts.css';
 import img from '../assets/howtoplay.gif';
+import badge5 from "../assets/badges/badge5.png" ;
+
+import { styled } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+    '& .MuiDialogContent-root': {
+      padding: theme.spacing(2),
+    },
+    '& .MuiDialogActions-root': {
+      padding: theme.spacing(1),
+    },
+  }));
 
 const Howtoplay = () => {
+    const [open1, setOpen1] = React.useState(false);
+    
+
+    const handleClickOpen_badge = () => {
+      setOpen1(true);
+    };
+
+    const handleClose = () => {
+      
+      setOpen1(false);
+     
+      
+        const dataToUpdate={
+            badge5: 1,
+           
+        }
+        const jsonString = JSON.stringify(dataToUpdate);
+    
+        const url = "http://localhost:3002/1" ;
+    
+        const options = {
+            method: 'PATCH',
+            headers : {
+                'Content-Type': 'application/json'
+            },
+            body : jsonString
+        }
+    
+        fetch (url, options)
+        .then(response => {
+            if (!response.ok)
+            {
+                throw new Error(`HIIP error ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(updatedData => {
+            console.log('Data updated: ', updatedData);
+        })
+        .catch (error => {
+            console.log('Error updating data:', error);
+        });
+        window.location.reload();
+      }
+    
+    
+   //   window.onload = handleClickOpen_badge;
+       
+      
+
     return (
     <Box sx={{ flexGrow: 1, backgroundColor:"#ffe", minHeight: "100vh" }}>
     <Navbar/>
 {/* top image Row */}
+
+
         <Box sx ={{ position: 'relative'}}>
             <img src={img} alt="Background" 
             style={{ width: '100%', height:300, borderRadius: 0, opacity: 0.73}} />
@@ -130,6 +200,48 @@ const Howtoplay = () => {
                 </Grid> 
             </Grid> 
         </Box>
+        <BootstrapDialog
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open1}
+      >
+        <DialogTitle sx={{ m: 0, p: 2 }}>            
+            🚨🚨 Badge Alert
+        </DialogTitle>
+        <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+            fontFamily:'RobotoMonov',
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+        
+        <DialogContent dividers>
+          <Typography>
+                    Congratulations!
+          </Typography>
+          <Typography gutterBottom> 
+                     You have just recieved a new badge. ✨ 
+          </Typography>
+          <Typography>
+          <img src={badge5} alt="badge4" style={{ height: '270px', width: 'auto' }} />
+          </Typography>
+          <Typography>
+                 👀 Check out all your badges at your profile.
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button autoFocus onClick={handleClose}>
+            Sounds Great!
+          </Button>
+        </DialogActions>
+      </BootstrapDialog>
     </Box>
     );
   };

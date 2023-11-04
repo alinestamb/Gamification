@@ -1,24 +1,27 @@
 {
   "1": {
     "dailyStreak": 1,
-    "points": 155,
-    "completed": 3,
+    "points": 20,
+    "completed": 2,
     "isDone": [
       "chapter1.section1",
-      "chapter1.section2",
-      "chapter1.section3",
-      "finalQuiz1"
+      "chapter1.section2"
     ],
     "name": "Guest User 1",
     "commentNo": 1,
-    "badges": [
-      "badge1",
-      "badge3"
-    ],
+    "badgesCount": 0,
+    "badge1": 0,
+    "badge2": 0,
+    "badge3": 0,
+    "badge4": 0,
+    "badge5": 0,
+    "badge6": 0,
+    "badge7": 0,
+    "badge8": 0,
     "bio": "This is the link of the blog post.",
     "links": "Blog post link",
     "enrolled": "Introduction to Artifical Intelligence",
-    "avatar": "avatar1"
+    "avatar": "avatar16"
   },
   "2": {
     "dailyStreak": 0,

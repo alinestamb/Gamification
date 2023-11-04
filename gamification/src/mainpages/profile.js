@@ -7,7 +7,7 @@ import '../fonts/fonts.css';
 import avatar from '../assets/avatar.png';
 import TextField from '@mui/material/TextField';
 import courseImg from '../assets/ai.png'; // Import the image
-
+import badge7 from "../assets/badges/badge7.png" ;
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -71,7 +71,7 @@ export default function CustomizedDialogs() {
     let [dailyStreak, setDailyStreak] = useState(null);
     let [points, setPoints] = useState(null);
     let [UserName, setName] = useState(null);
-    let [badges, setBadges] = useState([]);
+    let [badgesCount, setBadgesCount] = useState([]);
     let [bio, setBio] = useState(null);
     let [link, setLink] = useState(null);
     let [courseName, setCourseName] = useState(null);
@@ -130,7 +130,7 @@ export default function CustomizedDialogs() {
           setDailyStreak(data.dailyStreak);
           setPoints(data.points);
           setName(data.name);
-          setBadges(data.badges);
+          setBadgesCount(data.badgesCount);
           setBio(data.bio);
           setLink(data.links);
           setCourseName(data.enrolled);
@@ -159,12 +159,17 @@ export default function CustomizedDialogs() {
         const handleClose = () => {
           setOpen(false);
           setOpen1(false);
-         
+
+          handleClickOpen_badge();
+
+          setTimeout(function() {
           if(selectedAvatar != null)
           {
             avatar = selectedAvatar;
             const dataToUpdate={
                 avatar: selectedAvatar,
+                badgesCount : badgesCount+1,
+                badge7 : 1,
                
             }
             const jsonString = JSON.stringify(dataToUpdate);
@@ -195,6 +200,7 @@ export default function CustomizedDialogs() {
             });
             window.location.reload();
           }
+        }, 5000);
         };
 
         const handleImageClick = (avatar) => {
@@ -834,7 +840,7 @@ export default function CustomizedDialogs() {
                 </Grid>
                 <Grid item xs={4} p={1} sx={{backgroundColor: "#e5e0e0",border: "4px solid #9F10E7", marginBottom:"10px",margin:"40px", width:"200px", height:"90px", fontSize:"10px"}}> 
                 <Typography fontFamily={"Gamer"} textAlign={"center"}>Badges Collected </Typography>
-                <Typography sx = {{fontFamily:"Gamer", fontSize:"30px", textAlign:"center"}}>{badges.length}</Typography>                  
+                <Typography sx = {{fontFamily:"Gamer", fontSize:"30px", textAlign:"center"}}>{badgesCount}</Typography>                  
                 </Grid>
                 <Grid item xs={4} p={1} sx={{backgroundColor: "#e5e0e0",border: "4px solid #4CD964", marginBottom:"10px",margin:"40px", width:"200px", height:"90px", fontSize:"10px"}}>
                 <Typography fontFamily={"Gamer"} textAlign={"center"}>Day Streak</Typography>
@@ -882,7 +888,7 @@ export default function CustomizedDialogs() {
                      You have just recieved a new badge. ✨ 
           </Typography>
           <Typography>
-          <img src={avatarName} alt="avatar" style={{ height: '270px', width: 'auto' }} />
+          <img src={badge7} alt="avatar" style={{ height: '270px', width: 'auto' }} />
           </Typography>
           <Typography>
                  👀 Check out all your badges at your profile.

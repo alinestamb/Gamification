@@ -24,7 +24,14 @@ const Sidebar = ({}) => {
   const [dailyStreak, setDailyStreak] = useState(null);
   const [points, setPoints] = useState(null);
   const [name, setName] = useState(null);
-  const [badges, setBadges] = useState([]);
+  const [userBadge1, setBadge1] = useState(null);
+  const [userBadge2, setBadge2] = useState(null);
+  const [userBadge3, setBadge3] = useState(null);
+  const [userBadge4, setBadge4] = useState(null);
+  const [userBadge5, setBadge5] = useState(null);
+  const [userBadge6, setBadge6] = useState(null);
+  const [userBadge7, setBadge7] = useState(null);
+  const [userBadge8, setBadge8] = useState(null);
 
   let displayBadge1 = "none";
   let displayBadge2 = "none";
@@ -49,29 +56,104 @@ const Sidebar = ({}) => {
         setDailyStreak(data.dailyStreak);
         setPoints(data.points);
         setName(data.name);
-        setBadges(data.badges);
+        setBadge1(data.badge1);
+        setBadge2(data.badge2);
+        setBadge3(data.badge3);
+        setBadge4(data.badge4);
+        setBadge5(data.badge5);
+        setBadge6(data.badge6);
+        setBadge7(data.badge7);
+        setBadge8(data.badge8);
+        
         
         console.log(data);
       })
       .catch((error) => console.log(error));
   }, []);
-console.log('badges' , badges);
 
 
 
-// idk
+if (userBadge1 == 0)
+{
+  displayBadge1 = "none"
+}
+else
+{
+  displayBadge1 = "auto"
+}
+
+if (userBadge2 == 0)
+{
+  displayBadge2 = "none"
+}
+else
+{
+  displayBadge2 = "auto"
+}
+
+if (userBadge3 == 0)
+{
+  displayBadge3 = "none"
+}
+else
+{
+  displayBadge3 = "auto"
+}
+if (userBadge4 == 0)
+{
+  displayBadge4 = "none"
+}
+else
+{
+  displayBadge4 = "auto"
+}
+if (userBadge5 == 0)
+{
+  displayBadge5 = "none"
+}
+else
+{
+  displayBadge5 = "auto"
+}
+if (userBadge6 == 0)
+{
+  displayBadge6 = "none"
+}
+else
+{
+  displayBadge6 = "auto"
+}
+if (userBadge7 == 0)
+{
+  displayBadge7 = "none"
+}
+else
+{
+  displayBadge7 = "auto"
+}
+if (userBadge8 == 0)
+{
+  displayBadge8 = "none"
+}
+else
+{
+  displayBadge8 = "auto"
+}
+
+/*
+
   displayBadge4 = "auto";
   displayBadge5 = "auto";
   displayBadge8 = "auto";
   displayBadge7 = "auto";
   
   // comment badge 4
-  // if how to play badge 5
-  // reader finish chapter badge 8
+  // if how to play badge 5 <-- kinda not working keeps reloading
+  // reader finish chapter badge 8 
   // personalisation badge 7
 
-
-
+  displayBadge1 = "auto";
+*/
   return (
     <ThemeProvider theme={Robotomono}>
     <Box bgcolor="#e5e0e0" flex={1} p={2} sx={{ marginBottom: '20px', border: '2px solid #c1c1c1' }}>
