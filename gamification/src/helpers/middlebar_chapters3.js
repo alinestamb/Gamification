@@ -188,7 +188,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
       setTimeout(function() {
         
      
-      if ( isDone[2] == "chapter1.section3")
+      if ( isDone[2] )
       {
         console.log(true);
         window.location.href='http://localhost:3000/quizhome'

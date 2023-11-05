@@ -19,11 +19,20 @@
       },
       {
         "userId": "01a",
-        "comId": "814321a8-e741-41a8-b810-0f2f72fe9fd9",
+        "comId": "f62420ef-2fa7-443c-a5f1-82fb12a32155",
         "avatarUrl": "https://ui-avatars.com/api/name=GuestUser&background=random",
         "userProfile": null,
         "fullName": "Guest User",
-        "text": "Why are the different definitions of AI important to note?",
+        "text": "What is the law of thought?",
+        "replies": []
+      },
+      {
+        "userId": "01a",
+        "comId": "f62420ef-2fa7-443c-a5f1-82fb12a32155",
+        "avatarUrl": "https://ui-avatars.com/api/name=GuestUser&background=random",
+        "userProfile": null,
+        "fullName": "Guest User",
+        "text": "What is the law of thought?",
         "replies": []
       }
     ]
@@ -39,7 +48,6 @@
         "text": "What is deep reinforcement categorised as?",
         "replies": []
       }
-      
     ]
   },
   "chapter1.section3": {
