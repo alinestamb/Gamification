@@ -42,7 +42,7 @@ import "react-comments-section/dist/index.css";
       })
       .catch((error) => console.log(error));
     }, []);
-    
+
     const [isDone, setIsDone] = useState(null);
     let [userPoints, setUserPoints] = useState(null);
     let [ userCompleted, setUserCompleted] = useState(null);
@@ -206,7 +206,7 @@ import "react-comments-section/dist/index.css";
       currentUser={{
         currentUserId: "01a",
         currentUserImg:
-          "https://ui-avatars.com/api/name=GuestUser&background=random",
+          "http://localhost:3000/static/media/avatar16.e4601f42.png",
         currentUserFullName: "Guest User"
       }}
       logIn={{

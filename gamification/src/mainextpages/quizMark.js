@@ -12,6 +12,7 @@ import Middlebar from '../helpers/middlebar_chapters';
 const QuizMark = () => {
   document.body.style.backgroundColor = "#615A5A";
   const [isDone, setIsDone] = useState([]);
+  const [completed, setCompleted] = useState(null);
   
  let mc_1_or_sa_2 = 1;
  let content;
@@ -23,6 +24,7 @@ const QuizMark = () => {
        .then((response) => response.json())
        .then((data) => {
          setIsDone(data.isDone);
+         setCompleted(data.completed);
        })
        .catch((error) => console.log(error));
    }, []);
@@ -42,7 +44,8 @@ const QuizMark = () => {
       
       const dataToUpdate={
 
-         isDone : isDone
+         isDone : isDone,
+         completed : completed + 1
       }
       const jsonString = JSON.stringify(dataToUpdate);
   

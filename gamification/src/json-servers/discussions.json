@@ -6,35 +6,18 @@
         "comId": "017",
         "fullName": "User",
         "text": "What's the difference between the Law of Thought approach and Rational Agent approach?",
-        "avatarUrl": "https://ui-avatars.com/api/name=user&background=random",
+        "avatarUrl": "http://localhost:3000/static/media/avatar6.d62244f6.png",
         "replies": [
           {
             "userId": "02a",
             "comId": "013",
             "fullName": "John Smith",
-            "avatarUrl": "https://ui-avatars.com/api/name=AnotherUser&background=random",
+            "avatarUrl": "http://localhost:3000/static/media/avatar3.96c870ce.png",
             "text": "A rational agent acts to achieve the best possible outcome in its present circumstances. But in a law of thought, the agent has to act according to logical statements."
           }
         ]
-      },
-      {
-        "userId": "01a",
-        "comId": "f62420ef-2fa7-443c-a5f1-82fb12a32155",
-        "avatarUrl": "https://ui-avatars.com/api/name=GuestUser&background=random",
-        "userProfile": null,
-        "fullName": "Guest User",
-        "text": "What is the law of thought?",
-        "replies": []
-      },
-      {
-        "userId": "01a",
-        "comId": "f62420ef-2fa7-443c-a5f1-82fb12a32155",
-        "avatarUrl": "https://ui-avatars.com/api/name=GuestUser&background=random",
-        "userProfile": null,
-        "fullName": "Guest User",
-        "text": "What is the law of thought?",
-        "replies": []
       }
+      
     ]
   },
   "chapter1.section2": {
@@ -42,9 +25,9 @@
       {
         "userId": "01a",
         "comId": "eac4b752-356b-4962-ba08-de6ff38065b3",
-        "avatarUrl": "https://ui-avatars.com/api/name=GuestUser&background=random",
+        "avatarUrl": "http://localhost:3000/static/media/avatar3.96c870ce.png",
         "userProfile": null,
-        "fullName": "Guest User",
+        "fullName": "John Smith",
         "text": "What is deep reinforcement categorised as?",
         "replies": []
       }

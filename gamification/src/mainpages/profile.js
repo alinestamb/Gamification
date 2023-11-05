@@ -163,6 +163,7 @@ export default function CustomizedDialogs() {
           handleClickOpen_badge();
 
           setTimeout(function() {
+        }, 5000);
           if(selectedAvatar != null)
           {
             avatar = selectedAvatar;
@@ -200,7 +201,7 @@ export default function CustomizedDialogs() {
             });
             window.location.reload();
           }
-        }, 5000);
+        
         };
 
         const handleImageClick = (avatar) => {

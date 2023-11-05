@@ -205,7 +205,9 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
       const dataToUpdate={
          points: newPoints,
          completed: userCompleted,
-         isDone : isDone
+         isDone : isDone,
+         badge8: 1,
+         badgesCount: badgesCount+1,
       }
       const jsonString = JSON.stringify(dataToUpdate);
   
@@ -275,7 +277,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
       currentUser={{
         currentUserId: "01a",
         currentUserImg:
-          "https://ui-avatars.com/api/name=GuestUser&background=random",
+          "http://localhost:3000/static/media/avatar16.e4601f42.png",
         currentUserFullName: "Guest User"
       }}
       logIn={{

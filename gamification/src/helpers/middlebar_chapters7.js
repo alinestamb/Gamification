@@ -201,7 +201,7 @@ import "react-comments-section/dist/index.css";
       currentUser={{
         currentUserId: "01a",
         currentUserImg:
-          "https://ui-avatars.com/api/name=GuestUser&background=random",
+          "http://localhost:3000/static/media/avatar16.e4601f42.png",
         currentUserFullName: "Guest User"
       }}
       logIn={{

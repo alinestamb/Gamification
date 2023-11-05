@@ -179,7 +179,8 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
         .catch (error => {
             console.log('Error updating data:', error);
         });
-        window.location.reload();
+
+        window.location.replace("http://localhost:3000/chapters2");
       }
     
 
@@ -271,7 +272,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
         });
         window.location.href='http://localhost:3000/chapters2'
       }
-    }, 5000);
+    }, 2000);
     };
     
 
@@ -314,7 +315,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
       currentUser={{
         currentUserId: "01a",
         currentUserImg:
-          "https://ui-avatars.com/api/name=GuestUser&background=random",
+          "http://localhost:3000/static/media/avatar16.e4601f42.png",
         currentUserFullName: "Guest User"
       }}
       logIn={{
